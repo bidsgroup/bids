@@ -1,0 +1,2470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A teaching reference for the vocabulary of wisdom in Proverbs." />
+  <title>bidsgroup — Wisdom, Prudence & Discernment in Proverbs</title>
+  <style>
+:root {
+  --ink: #17201d;
+  --muted: #66726d;
+  --paper: #fbfaf6;
+  --panel: #ffffff;
+  --soft: #f0eee6;
+  --green: #294f45;
+  --green-2: #3f6d61;
+  --gold: #b68b44;
+  --line: #dcd9cf;
+  --shadow: 0 18px 55px rgba(23,32,29,.09);
+  --radius: 20px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; }
+.shell { width: min(1160px, calc(100% - 36px)); margin: 0 auto; }
+.site-header {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(251,250,246,.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(220,217,207,.8);
+}
+.nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-mark {
+  display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px;
+  background: var(--green); color: #fff; font-family: Georgia, serif; font-size: 24px;
+}
+.brand strong { display: block; font-family: Georgia, serif; font-size: 17px; }
+.brand small { display: block; color: var(--muted); font-size: 11px; letter-spacing: .04em; }
+.site-nav { display: flex; gap: 10px 16px; align-items: center; justify-content: flex-end; flex-wrap: wrap; }
+.site-nav a { font-size: 14px; text-decoration: none; color: #39443f; }
+.site-nav a:hover { color: var(--green); }
+.menu-btn { display: none; border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 8px 11px; }
+.hero { padding: 92px 0 76px; background: radial-gradient(circle at 80% 5%, #e5e1d3 0, transparent 31%), linear-gradient(180deg, #f9f7f0 0, var(--paper) 100%); }
+.hero-grid { display: grid; grid-template-columns: 1.35fr .8fr; gap: 58px; align-items: center; }
+.eyebrow { margin: 0 0 12px; color: var(--gold); font-weight: 800; letter-spacing: .13em; font-size: 12px; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.12; }
+h1 { margin: 0; font-size: clamp(44px, 6vw, 76px); letter-spacing: -.035em; max-width: 850px; }
+h2 { margin: 0 0 12px; font-size: clamp(34px, 4vw, 51px); letter-spacing: -.025em; }
+h3 { margin: 0 0 8px; font-size: 23px; }
+.lead { max-width: 760px; color: #4e5a55; font-size: 20px; margin: 24px 0 0; }
+.lead-small { font-size: 19px; color: #dce9e4; max-width: 650px; }
+.hero-actions { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+.button { display: inline-block; border-radius: 12px; padding: 12px 18px; text-decoration: none; font-weight: 750; font-size: 14px; }
+.button.primary { background: var(--green); color: #fff; }
+.button.secondary { border: 1px solid var(--line); background: rgba(255,255,255,.7); }
+.thesis-card { background: #fff; border: 1px solid var(--line); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); }
+.label { font-size: 11px; letter-spacing: .11em; color: var(--gold); font-weight: 800; }
+.thesis-card blockquote { margin: 18px 0 4px; font: 700 28px/1.25 Georgia, serif; }
+.thesis-card cite { color: var(--muted); font-style: normal; font-size: 13px; }
+.thesis-card p { margin: 20px 0 0; color: #4f5955; }
+.section { padding: 84px 0; }
+.section-muted { background: var(--soft); }
+.section-heading { max-width: 760px; margin-bottom: 34px; }
+.section-heading > p:last-child { color: var(--muted); margin-bottom: 0; }
+.row-heading { max-width: none; display: flex; align-items: end; justify-content: space-between; gap: 28px; }
+.flow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.wisdom-aspects { margin: 0 0 34px; padding: 28px; background: #f6f3ea; border: 1px solid var(--line); border-radius: 20px; }
+.wisdom-aspects-heading { max-width: 850px; margin-bottom: 22px; }
+.wisdom-aspects-heading h3 { margin: 8px 0 8px; font-size: 26px; }
+.wisdom-aspects-heading p { margin: 0; color: var(--muted); }
+.wisdom-aspects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.wisdom-aspect-card { background: #fff; border-top: 3px solid var(--gold); padding: 20px; border-radius: 4px 4px 14px 14px; }
+.wisdom-aspect-card h4 { margin: 0 0 8px; color: var(--green); font-size: 18px; }
+.wisdom-aspect-card p { margin: 0; color: #4f5955; }
+@media (max-width: 820px) { .wisdom-aspects-grid { grid-template-columns: 1fr; } }
+
+.flow-card { position: relative; min-height: 230px; background: #fff; border: 1px solid var(--line); padding: 28px 24px 22px; border-radius: 18px; }
+.flow-card.accent { background: var(--green); color: #fff; border-color: var(--green); }
+.flow-card.accent p { color: #e6efec; }
+.flow-card p { margin: 0; color: var(--muted); }
+.step { display: inline-grid; place-items: center; width: 29px; height: 29px; border-radius: 50%; background: var(--soft); font-weight: 800; font-size: 12px; margin-bottom: 30px; }
+.flow-card.accent .step { background: rgba(255,255,255,.14); }
+.relationship-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.relationship-card { border-top: 3px solid var(--gold); background: #f6f3ea; padding: 26px; border-radius: 4px 4px 16px 16px; }
+.relationship-card p { color: var(--muted); margin-bottom: 0; }
+.search-box { width: min(360px, 100%); }
+.search-box span { display: block; font-size: 12px; font-weight: 800; margin-bottom: 6px; color: var(--muted); }
+.search-box input { width: 100%; padding: 13px 14px; border: 1px solid #cbc7b9; border-radius: 12px; font: inherit; background: #fff; }
+.term-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.term-card { cursor: pointer; text-align: left; border: 1px solid #d6d2c5; background: #fff; padding: 23px; border-radius: 17px; transition: transform .18s ease, box-shadow .18s ease; }
+.term-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(23,32,29,.08); }
+.term-card .meta { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+.term-card h3 { margin-top: 8px; }
+.term-card p { color: var(--muted); margin: 0 0 18px; }
+.term-card .open { color: var(--green); font-weight: 800; font-size: 13px; }
+.no-results { color: var(--muted); }
+.compare-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.compare-card { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #fff; }
+.compare-title { padding: 18px 22px; background: #f1eee5; font: 700 21px Georgia, serif; }
+.compare-body { display: grid; grid-template-columns: 1fr 1fr; }
+.compare-side { padding: 20px 22px; }
+.compare-side + .compare-side { border-left: 1px solid var(--line); }
+.compare-side strong { display: block; color: var(--green); margin-bottom: 5px; }
+.compare-side p { margin: 0; color: var(--muted); }
+.fear-section { background: var(--green); color: #fff; }
+.fear-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: start; }
+.fear-points { display: grid; gap: 10px; }
+.fear-points article { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.13); border-radius: 14px; padding: 17px 18px; }
+.fear-points strong { display: block; color: #ead6ae; margin-bottom: 3px; }
+.fear-points span { color: #dfe9e5; }
+.fear-quote { margin-top: 24px; padding: 20px 22px; border-left: 3px solid #d5b77a; background: rgba(255,255,255,.07); border-radius: 0 14px 14px 0; }
+.fear-quote blockquote { margin: 0 0 10px; font: 700 21px/1.4 Georgia, serif; color: #fff; }
+.fear-quote cite { display: block; color: #d9e3df; font-style: normal; font-size: 13px; line-height: 1.5; }
+.fear-definition {
+  margin: 18px 0 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 14px;
+  background: rgba(255,255,255,.075);
+  color: #eef5f2;
+}
+.fear-definition strong { color: #ead6ae; }
+.fear-expanded {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  display: grid;
+  gap: 18px;
+}
+.fear-balance {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.fear-balance article,
+.fear-dimensions article,
+.fear-scholars article {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(255,255,255,.065);
+}
+.fear-balance h3,
+.fear-dimensions h3,
+.fear-scholars h3,
+.fear-scripture h3 {
+  margin: 0 0 8px;
+  font: 700 19px/1.25 Georgia, serif;
+  color: #fff;
+}
+.fear-balance p,
+.fear-dimensions p,
+.fear-scholars p,
+.fear-scripture p {
+  margin: 0;
+  color: #dfe9e5;
+}
+.fear-balance article:nth-child(3) { border-color: rgba(234,214,174,.45); }
+.fear-dimensions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.fear-dimensions strong,
+.fear-scholars strong { color: #ead6ae; }
+.fear-scripture {
+  padding: 24px;
+  border-radius: 17px;
+  background: #f8f5ec;
+  color: var(--ink);
+}
+.fear-scripture h3 { color: var(--green); }
+.fear-scripture p { color: #4f5955; }
+.fear-scripture .fear-scripture-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.fear-scripture .scripture-card {
+  padding: 16px 17px;
+  border: 1px solid #ded8c8;
+  border-radius: 13px;
+  background: #fff;
+}
+.fear-scripture .scripture-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--green);
+}
+.fear-scholars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.fear-scholars .longman-emphasis {
+  grid-column: span 2;
+  border-color: rgba(234,214,174,.45);
+}
+.fear-bottom-line {
+  padding: 20px 22px;
+  border-left: 4px solid #d5b77a;
+  border-radius: 0 14px 14px 0;
+  background: rgba(255,255,255,.08);
+}
+.fear-bottom-line p { margin: 0; color: #f2f6f4; }
+.fear-bottom-line strong { color: #ead6ae; }
+@media (max-width: 900px) {
+  .fear-balance, .fear-dimensions, .fear-scholars { grid-template-columns: 1fr; }
+  .fear-scholars .longman-emphasis { grid-column: auto; }
+  .fear-scripture .fear-scripture-grid { grid-template-columns: 1fr; }
+}
+
+/* Proverbs 9: two invitations */
+.two-invitations {
+  background: #f3f0e7;
+  border-top: 1px solid #ded8c8;
+  border-bottom: 1px solid #ded8c8;
+}
+.invitation-intro { max-width: 900px; margin-bottom: 24px; }
+.invitation-intro h2 { margin-bottom: 10px; }
+.invitation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.invitation-house {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 26px;
+  background: #fff;
+}
+.invitation-house.wisdom-house { border-top: 5px solid var(--green); }
+.invitation-house.folly-house { border-top: 5px solid #8c5e55; }
+.invitation-house h3 { margin: 6px 0 10px; font-size: 25px; }
+.invitation-house ul { padding-left: 20px; color: var(--muted); margin-bottom: 0; }
+.invitation-house li + li { margin-top: 7px; }
+.invitation-destination {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 750;
+}
+.wisdom-house .invitation-destination { background: #eef4ef; color: var(--green); }
+.folly-house .invitation-destination { background: #f7eeee; color: #794c45; }
+.invitation-center {
+  margin-top: 18px;
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--green);
+  color: #fff;
+}
+.invitation-center h3 { margin: 0 0 8px; color: #fff; }
+.invitation-center p { margin: 0; color: #e8f0ed; }
+.invitation-center p + p { margin-top: 9px; }
+.longman-9 {
+  margin-top: 18px;
+  padding: 22px 24px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 15px 15px 0;
+  background: #fff;
+}
+.longman-9 h3 { margin: 0 0 7px; }
+.longman-9 p { margin: 0 0 8px; color: var(--muted); }
+.longman-9 a { color: var(--green); font-weight: 750; }
+.mentoring-bridge {
+  margin-top: 18px;
+  padding: 20px 22px;
+  border: 1px dashed #bbb29e;
+  border-radius: 15px;
+  background: #faf8f2;
+}
+.mentoring-bridge p { margin: 0; }
+
+/* Practical wisdom */
+.practical-section { background: #fff; }
+.practical-intro { max-width: 920px; margin-bottom: 24px; }
+.practical-intro .kidner-line {
+  margin-top: 12px;
+  font: 700 19px/1.45 Georgia, serif;
+  color: var(--green);
+}
+.practical-topic-grid { display: grid; gap: 20px; }
+.practical-topic {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fbfaf6;
+}
+.practical-topic > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: 220px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  background: #fff;
+}
+.practical-topic > summary::-webkit-details-marker { display:none; }
+.practical-topic > summary::after {
+  content: "+";
+  font-size: 28px;
+  color: var(--green);
+  font-weight: 500;
+}
+.practical-topic[open] > summary::after { content: "–"; }
+.practical-topic .topic-label {
+  display: block;
+  font: 800 30px/1.05 Georgia, serif;
+  letter-spacing: -.02em;
+  color: var(--green);
+}
+.practical-topic > summary h3 { margin: 0 0 5px; font-size: 20px; }
+.practical-topic > summary p { margin: 0; color: var(--muted); }
+.practical-body { padding: 24px; border-top: 1px solid var(--line); }
+.practical-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.practical-box { border: 1px solid var(--line); border-radius: 15px; padding: 19px; background: #fff; }
+.practical-box h4 { margin: 0 0 8px; font-size: 18px; }
+.practical-box p { margin: 0; color: var(--muted); }
+.practical-box p + p { margin-top: 9px; }
+.practical-box ul { margin: 0; padding-left: 20px; color: var(--muted); }
+.practical-box li + li { margin-top: 6px; }
+.verse-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.verse-chip { border-radius: 999px; padding: 6px 10px; background: #eef2ef; color: var(--green); font-size: 12px; font-weight: 750; }
+.verse-chip a.esv-crossref-link { color: var(--green) !important; text-decoration: none !important; font-weight: 800; }
+.esv-helper {
+  margin: 14px 0 22px;
+  padding: 14px 16px;
+  border-radius: 13px;
+  background: #edf3ef;
+  color: #425149;
+  font-size: 14px;
+}
+.esv-helper strong { color: var(--green); }
+.theologian-note {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.theologian-note article { padding: 18px; border-radius: 14px; background: #f2efe5; }
+.theologian-note h4 { margin: 0 0 6px; font-size: 16px; }
+.theologian-note p { margin: 0; color: var(--muted); font-size: 14px; }
+.theologian-note a { display: inline-block; margin-top: 7px; color: var(--green); font-weight: 750; font-size: 12px; }
+.mentor-questions {
+  margin-top: 18px;
+  padding: 20px 22px;
+  border-radius: 15px;
+  background: var(--green);
+  color: #fff;
+}
+.mentor-questions h4 { margin: 0 0 8px; color: #fff; }
+.mentor-questions ul { margin: 0; padding-left: 20px; color: #e8f0ed; }
+.mentor-questions li + li { margin-top: 6px; }
+.practical-bottom {
+  margin-top: 22px;
+  padding: 20px 22px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+  background: #f6f3ea;
+}
+.practical-bottom p { margin: 0; color: #4f5955; }
+@media (max-width: 850px) {
+  .invitation-grid, .practical-columns, .theologian-note { grid-template-columns: 1fr; }
+  .practical-topic > summary { grid-template-columns: 1fr auto; }
+  .practical-topic .topic-label { grid-column: 1 / -1; }
+}
+
+
+/* Practical Wisdom refinements */
+.practical-topic-grid { gap: 26px; }
+.practical-topic {
+  border: 2px solid #cfc7b6;
+  border-radius: 22px;
+  box-shadow: 0 5px 18px rgba(22, 36, 31, .05);
+  background: #fff;
+}
+.practical-topic > summary {
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+  row-gap: 7px;
+  align-items: center;
+  padding: 25px 28px;
+  border-left: 7px solid #d5b77a;
+  background: #fbfaf6;
+}
+.practical-topic > summary::after {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+.practical-topic .topic-label {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  font: 800 clamp(25px, 3vw, 35px)/1.08 Georgia, serif;
+  letter-spacing: -.02em;
+  color: var(--green);
+  overflow-wrap: anywhere;
+}
+.practical-topic > summary > div {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+}
+.practical-topic > summary h3 {
+  margin: 0 0 5px;
+  font-size: 19px;
+  color: #3f4945;
+}
+.practical-topic > summary p {
+  max-width: 900px;
+}
+.practical-topic[open] {
+  border-color: #8ba195;
+  box-shadow: 0 10px 28px rgba(22, 61, 51, .10);
+}
+.practical-topic[open] > summary {
+  background: #f2f5f1;
+  border-left-color: var(--green);
+}
+.practical-topic[open] .practical-body {
+  border-top: 2px solid #d8ddd7;
+  background: #fcfbf7;
+}
+.verse-chip {
+  cursor: pointer;
+  border: 1px solid #d9ded9;
+}
+.verse-chip:focus-visible {
+  outline: 3px solid #b9a36f;
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .practical-topic > summary { padding: 21px 20px; }
+  .practical-topic .topic-label { font-size: 25px; }
+}
+
+.anti-grid, .scholar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.anti-grid article, .scholar-grid article { background: #fff; border: 1px solid var(--line); border-radius: 17px; padding: 23px; }
+.anti-grid p, .scholar-grid p { color: var(--muted); margin-bottom: 0; }
+.scholar-grid { grid-template-columns: repeat(5, 1fr); }
+.verse-list { display: grid; gap: 9px; }
+.verse-item { display: grid; grid-template-columns: 125px 1fr auto; gap: 18px; align-items: center; background: #fff; border: 1px solid #d8d4c7; border-radius: 14px; padding: 16px 18px; }
+.verse-ref { font: 700 18px Georgia, serif; }
+.esv-key-passage { cursor: pointer; color: var(--green); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.esv-key-passage:focus-visible { outline: 3px solid #b9a36f; outline-offset: 3px; border-radius: 4px; }
+.verse-note { color: var(--muted); }
+.verse-tags { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.tag { background: #eef2ef; color: var(--green); border-radius: 999px; padding: 5px 9px; font-size: 11px; font-weight: 750; }
+footer { background: #111917; color: #d8e0dd; padding: 38px 0; }
+.footer-grid { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.footer-grid p { margin: 4px 0 0; color: #9ba8a3; font-size: 13px; }
+.footer-grid a { color: #e7d6b6; text-decoration: none; }
+dialog { width: min(780px, calc(100% - 28px)); max-height: 86vh; border: 0; border-radius: 20px; padding: 0; box-shadow: 0 30px 100px rgba(0,0,0,.3); }
+dialog::backdrop { background: rgba(10,16,14,.6); backdrop-filter: blur(4px); }
+.dialog-close { position: sticky; z-index: 3; top: 14px; float: right; margin: 14px 14px 0 0; width: 38px; height: 38px; border: 0; border-radius: 50%; background: #ece9df; font-size: 25px; cursor: pointer; }
+#dialog-content { padding: 34px 38px 38px; }
+#dialog-content .hebrew { font-size: 34px; direction: rtl; }
+.detail-meta { color: var(--gold); font-weight: 800; font-size: 13px; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+.detail-box { background: #f5f3eb; padding: 18px; border-radius: 14px; }
+.detail-box h4 { margin: 0 0 5px; }
+.detail-box p { margin: 0; color: var(--muted); }
+@media (max-width: 980px) {
+  .flow-grid { grid-template-columns: repeat(2, 1fr); }
+  .term-grid { grid-template-columns: repeat(2, 1fr); }
+  .scholar-grid { grid-template-columns: repeat(2, 1fr); }
+  .anti-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid, .fear-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .site-header { position: relative; }
+  .menu-btn { display: inline-block; }
+  .site-nav { display: none; position: absolute; top: 72px; left: 18px; right: 18px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px; box-shadow: var(--shadow); flex-direction: column; align-items: stretch; }
+  .site-nav.open { display: flex; }
+  .site-nav a { padding: 8px; }
+  .brand small { display: none; }
+  .brand strong { font-size: 14px; }
+  .hero { padding-top: 58px; }
+  .section { padding: 62px 0; }
+  .flow-grid, .relationship-grid, .term-grid, .compare-grid, .anti-grid, .scholar-grid { grid-template-columns: 1fr; }
+  .row-heading { align-items: stretch; flex-direction: column; }
+  .compare-body { grid-template-columns: 1fr; }
+  .compare-side + .compare-side { border-left: 0; border-top: 1px solid var(--line); }
+  .verse-item { grid-template-columns: 1fr; gap: 5px; }
+  .verse-tags { justify-content: flex-start; }
+  .footer-grid { align-items: flex-start; flex-direction: column; }
+  #dialog-content { padding: 28px 22px 28px; }
+  .detail-grid { grid-template-columns: 1fr; }
+}
+
+/* Methodology / lexical precision note */
+.method-section { padding: 28px 0 10px; }
+.method-card {
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--gold);
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 34px;
+  box-shadow: 0 10px 35px rgba(23,32,29,.05);
+}
+.method-kicker { color: var(--gold); font-size: 11px; font-weight: 850; letter-spacing: .13em; margin-bottom: 8px; }
+.method-card h2 { font-size: clamp(27px, 3vw, 39px); max-width: 900px; }
+.method-card > p { color: #4f5b56; max-width: 980px; }
+.method-points { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin: 24px 0 18px; }
+.method-points p { margin: 0; padding: 18px; background: #f6f3ea; border-radius: 13px; color: var(--muted); }
+.method-points strong { color: var(--ink); }
+.method-bottom { border-top: 1px solid var(--line); padding-top: 18px; margin-bottom: 0; }
+.lexical-caution { margin-top: 22px; border-left: 4px solid var(--gold); background: #f6f3ea; padding: 16px 18px; border-radius: 4px 12px 12px 4px; color: #5b6661; font-size: 13px; }
+.lexical-caution strong { color: var(--ink); display: block; margin-bottom: 4px; }
+.lexical-caution p { margin: 0; }
+@media (max-width: 820px) { .method-points { grid-template-columns: 1fr; } .method-card { padding: 24px; } }
+
+.bookend-verses { display: grid; gap: 16px; margin-top: 18px; }
+.bookend-verses > div { padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.bookend-verses > div:last-child { padding-bottom: 0; border-bottom: 0; }
+.bookend-verses blockquote { margin: 0 0 4px; font: 700 25px/1.28 Georgia, serif; }
+.moral-foundation { margin-top: 22px; padding: 18px; border-radius: 14px; background: #f6f3ea; border-left: 3px solid var(--gold); }
+.moral-foundation strong { display: block; color: var(--green); margin-bottom: 6px; }
+.moral-foundation p { margin: 0; }
+.study-expansion { margin-top: 22px; display: grid; gap: 12px; }
+.study-expansion .detail-box { background: #f8f7f2; }
+.scholar-note { border-left: 3px solid var(--gold); }
+
+
+/* Proverbs 14:8 — wisdom system in action */
+
+.system-begins {
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 30px;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f2 100%);
+}
+.system-begins-head { max-width: 900px; margin-bottom: 22px; }
+.system-begins-head h3 { margin: 8px 0 8px; font-size: 28px; }
+.system-begins-head p { margin: 0; color: var(--muted); }
+.system-begins-verse {
+  margin: 20px 0 22px;
+  padding: 22px 24px;
+  border-left: 4px solid var(--gold);
+  background: #fff;
+  border-radius: 0 14px 14px 0;
+}
+.system-begins-verse blockquote { margin: 0 0 8px; font: 700 24px/1.42 Georgia, serif; }
+.system-begins-verse cite { font-style: normal; color: var(--muted); font-size: 13px; }
+.simple-note { margin: 18px 0; padding: 18px 20px; border-radius: 15px; background: #f3f5ef; }
+.simple-note p { margin: 0; color: var(--muted); }
+.simple-note strong { color: var(--ink); }
+.system-begins-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.system-begins-card { border: 1px solid var(--line); border-radius: 16px; padding: 22px; background: #fff; }
+.system-begins-card h4 { margin: 5px 0 8px; font-size: 20px; }
+.system-begins-card h4 small, .hebrew-inline small { font-size: 12px; font-family: system-ui, sans-serif; color: var(--muted); font-weight: 700; }
+.system-begins-card p { margin: 0; color: var(--muted); }
+.system-begins-summary { margin: 20px 0 0; padding: 18px 20px; border-radius: 15px; background: var(--green); color: #fff; }
+.system-begins-summary p { margin: 0; }
+.voice-note { margin-top: 22px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: #fbfaf6; }
+.voice-note h4 { margin: 0 0 9px; }
+.voice-note p { margin: 0 0 10px; color: var(--muted); }
+.voice-note p:last-child { margin-bottom: 0; }
+.resource-groups { display: grid; gap: 28px; }
+.resource-group-heading { margin-bottom: 14px; }
+.resource-group-heading h3 { margin: 0 0 6px; font-size: 22px; }
+.resource-group-heading p { margin: 0; color: var(--muted); max-width: 860px; }
+.scholar-grid.broad { grid-template-columns: repeat(4, 1fr); }
+.scholar-grid article .resource-role { display: block; margin: 8px 0 0; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--green); font-weight: 700; }
+.resource-link { display: inline-block; margin-top: 12px; font-weight: 700; text-decoration: none; color: var(--green); }
+.resource-link:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .system-begins-grid, .scholar-grid.broad { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .system-begins { padding: 24px; }
+  .system-begins-grid, .scholar-grid.broad { grid-template-columns: 1fr; }
+}
+
+/* Proverbs 2:10–11 — wisdom becomes an internal guardian */
+.system-guardian {
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 30px;
+  background: linear-gradient(180deg, #f7faf8 0%, #ffffff 100%);
+}
+.system-guardian-head { max-width: 900px; margin-bottom: 22px; }
+.system-guardian-head h3 { margin: 8px 0 8px; font-size: 28px; }
+.system-guardian-head p { margin: 0; color: var(--muted); }
+.system-guardian-verse {
+  margin: 20px 0 22px;
+  padding: 22px 24px;
+  border-left: 4px solid var(--gold);
+  background: #fff;
+  border-radius: 0 14px 14px 0;
+}
+.system-guardian-verse blockquote { margin: 0 0 8px; font: 700 24px/1.42 Georgia, serif; }
+.system-guardian-verse cite { font-style: normal; color: var(--muted); font-size: 13px; }
+.system-guardian-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.system-guardian-card { border: 1px solid var(--line); border-radius: 16px; padding: 22px; background: #fbfaf6; }
+.system-guardian-card .hebrew-inline { display: block; margin: 4px 0 8px; font-size: 22px; color: var(--green); }
+.system-guardian-card p { margin: 0; color: var(--muted); }
+.guardian-summary { margin-top: 20px; padding: 20px 22px; border-radius: 15px; background: var(--green); color: #fff; }
+.guardian-summary p { margin: 0; }
+.guardian-summary p + p { margin-top: 8px; }
+.guardian-protection { margin-top: 22px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.guardian-protection h4 { margin: 0 0 10px; font-family: Georgia, serif; font-size: 20px; }
+.guardian-protection p { margin: 0 0 10px; color: var(--muted); }
+.guardian-protection ul { margin: 0; padding-left: 22px; color: #4f5955; }
+.guardian-protection li + li { margin-top: 5px; }
+.guardian-sequence { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.guardian-sequence div { padding: 16px; border-radius: 13px; background: #f6f3ea; text-align: center; color: #4f5955; }
+.guardian-sequence strong { display: block; color: var(--green); margin-bottom: 4px; }
+@media (max-width: 820px) {
+  .system-guardian-grid, .guardian-sequence { grid-template-columns: 1fr; }
+  .system-guardian { padding: 24px; }
+}
+
+.system-action {
+  margin-top: 34px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 35px rgba(23,32,29,.05);
+}
+.system-action-head { max-width: 880px; margin-bottom: 22px; }
+.system-action-head h3 { margin: 8px 0 8px; font-size: 28px; }
+.system-action-head p { margin: 0; color: var(--muted); }
+.system-action-verse {
+  margin: 18px 0 24px;
+  padding: 22px 24px;
+  border-left: 4px solid var(--gold);
+  background: #f6f3ea;
+  border-radius: 4px 14px 14px 4px;
+}
+.system-action-verse blockquote { margin: 0 0 8px; font: 700 24px/1.42 Georgia, serif; }
+.system-action-verse cite { font-style: normal; color: var(--muted); font-size: 13px; }
+.system-action-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.system-action-card { border: 1px solid var(--line); border-radius: 16px; padding: 22px; background: #fbfaf6; }
+.system-action-card .hebrew-inline { display: block; margin: 4px 0 8px; font-size: 22px; color: var(--green); }
+.system-action-card p { margin: 0; color: var(--muted); }
+.action-note { margin-top: 18px; padding: 18px 20px; background: #eef2ef; border-radius: 14px; color: #45534d; }
+.action-note p { margin: 0; }
+.action-progression { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.action-progression div { padding: 16px; border-radius: 13px; background: var(--green); color: #fff; text-align: center; }
+.action-progression strong { display: block; color: #ead6ae; margin-bottom: 4px; }
+.way-questions { margin-top: 22px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 16px; }
+.way-questions h4 { margin: 0 0 10px; font-family: Georgia, serif; font-size: 20px; }
+.way-questions ul { margin: 0; padding-left: 22px; color: #4f5955; }
+.way-questions li + li { margin-top: 5px; }
+.fool-contrast { margin-top: 18px; color: #4f5955; }
+.fool-contrast strong { color: var(--ink); }
+@media (max-width: 820px) {
+  .system-action-grid, .action-progression { grid-template-columns: 1fr; }
+  .system-action { padding: 24px; }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>bidsgroup</strong>
+          <small>Wisdom, Prudence & Discernment in Proverbs</small>
+        </span>
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#system">Wisdom System</a>
+        <a href="#terms">Word Studies</a>
+        <a href="#compare">Compare</a>
+        <a href="#fear">Fear of Yahweh</a>
+        <a href="#proverbs9">Proverbs 9</a>
+        <a href="#jesus-wisdom">Jesus & Wisdom</a>
+        <a href="#practical">Practical Wisdom</a>
+        <a href="#anti">Anti-Wisdom</a>
+        <a href="#verses">Verse Index</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">BIDSGROUP · SOLOMON’S WISDOM IN PROVERBS</p>
+          <h1>Learning to see life the way wisdom sees it.</h1>
+          <p class="lead"><strong>This is not a general study of Proverbs.</strong> Its focus is the wisdom teaching centered in Solomon and preserved in Proverbs: what wisdom is, how its capacities work together, what wisdom produces in a life, and what follows when wisdom is rejected.</p>
+          <p class="lead" style="font-size:18px">The ESV Bible translation uses English words such as <em>wisdom</em>, <em>knowledge</em>, <em>understanding</em>, <em>prudence</em>, <em>discernment</em>, <em>discretion</em>, and <em>sense</em> to render an overlapping Hebrew vocabulary. The site gives those English labels useful teaching definitions while keeping the underlying Hebrew relationships visible.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#system">Explore the framework</a>
+            <a class="button secondary" href="#terms">Browse the terms</a>
+          </div>
+        </div>
+        <aside class="thesis-card">
+          <span class="label">Essential qualification</span>
+          <div class="bookend-verses">
+            <div>
+              <blockquote>“The fear of the LORD is the beginning of knowledge.”</blockquote>
+              <cite>Proverbs 1:7</cite>
+            </div>
+            <div>
+              <blockquote>“The fear of the LORD is the beginning of wisdom.”</blockquote>
+              <cite>Proverbs 9:10</cite>
+            </div>
+          </div>
+          <div class="moral-foundation">
+            <strong>Its moral foundation — Proverbs 1:3</strong>
+            <p>Wisdom is trained toward wise dealing, <em>righteousness, justice, and equity</em>. Proverbs therefore does not treat these capacities as morally neutral mental skills; they are formed for upright life before Yahweh.</p>
+          </div>
+          <p>These abilities become <strong>true wisdom</strong> when governed by the fear of Yahweh and directed by this moral order. Without that theological and ethical center, shrewdness can become manipulation, planning can become scheming, and intelligence can serve folly.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="method-section shell" aria-labelledby="method-title">
+      <div class="method-card">
+        <div class="method-kicker">AN IMPORTANT READING NOTE</div>
+        <h2 id="method-title">Useful teaching distinctions—not rigid Hebrew boxes.</h2>
+        <p><strong>Study purpose:</strong> this site is trying to better understand Solomon’s teaching about wisdom—its foundation, its capacities, its effects in a life, and what follows when wisdom is rejected.</p>
+        <p>The definitions here describe the <strong>English wording used by the ESV</strong>. They are useful teaching categories, but they are not meant to imply that every English term corresponds to one separate Hebrew technical term.</p>
+        <div class="method-points">
+          <p><strong>Hebrew and English overlap.</strong> One Hebrew word can be translated several ways depending on context, and the same English word can represent different Hebrew words.</p>
+          <p><strong>Related Hebrew words overlap too.</strong> For example, <em>bîn</em> (<em>understand</em>), <em>bînâ</em> (<em>insight</em>), and <em>tĕvûnâ</em> (<em>understanding</em>) belong to the same word family. The distinctions are helpful, but context remains controlling.</p>
+          <p><strong>“Sense” shows why this matters.</strong> <em>Lēb</em> means <strong>heart</strong>, not “sense,” even though the ESV can render a heart expression as “sense” (Prov. 8:5). Elsewhere “sense” translates a different word such as <em>śēkel</em> (Prov. 19:11).</p>
+        </div>
+        <p class="method-bottom"><strong>Bottom line:</strong> use these definitions as recurring teaching emphases, not as one-to-one dictionary equations for every occurrence.</p>
+      </div>
+    </section>
+
+    <section id="system" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">THE WISDOM SYSTEM</p>
+        <h2>A teaching map of the ESV’s wisdom vocabulary</h2>
+        <p>The headings below are <strong>English teaching labels</strong>. They help distinguish recurring functions in Proverbs, but they do not imply that each label corresponds to one unique Hebrew word or that the Hebrew terms never overlap.</p>
+      </div>
+
+      <div class="wisdom-aspects" aria-label="Three aspects of wisdom">
+        <div class="wisdom-aspects-heading">
+          <span class="label">THREE ASPECTS OF WISDOM</span>
+          <h3>Wisdom is practical, ethical, and theological.</h3>
+          <p>Proverbs presents wisdom as more than mental ability. It is skill for living well in Yahweh’s world, and that skill has three inseparable dimensions.</p>
+        </div>
+        <div class="wisdom-aspects-grid">
+          <article class="wisdom-aspect-card">
+            <h4>Practical</h4>
+            <p><strong>Skillfully negotiating life’s opportunities, dangers, relationships, and complications.</strong></p>
+          </article>
+          <article class="wisdom-aspect-card">
+            <h4>Ethical</h4>
+            <p><strong>Doing what is right, just, and fair.</strong></p>
+          </article>
+          <article class="wisdom-aspect-card">
+            <h4>Theological</h4>
+            <p><strong>Living in proper relationship with Yahweh, beginning with the fear of the LORD.</strong></p>
+          </article>
+        </div>
+      </div>
+
+      <div class="flow-grid">
+        <article class="flow-card accent">
+          <span class="step">1</span>
+          <h3>Wisdom</h3>
+          <p><strong>Master virtue.</strong> Skill in godly, righteous living; it unites and governs the rest.</p>
+        </article>
+        <article class="flow-card">
+          <span class="step">2</span>
+          <h3>Knowledge</h3>
+          <p><strong>Truth grounded in Yahweh.</strong> Knowing truth begins with the fear of Yahweh and recognizes the created and moral order.</p>
+        </article>
+        <article class="flow-card">
+          <span class="step">3</span>
+          <h3>Understanding</h3>
+          <p><strong>Comprehension of truth.</strong> Grasps meaning, relationships, causes, and how truths fit together.</p>
+        </article>
+        <article class="flow-card">
+          <span class="step">4</span>
+          <h3>Insight</h3>
+          <p><strong>Penetrating understanding.</strong> Sees beneath the surface and grasps the deeper significance of a matter.</p>
+        </article>
+        <article class="flow-card">
+          <span class="step">5</span>
+          <h3>Sense</h3>
+          <p><strong>Sound judgment.</strong> The ability to think and act sensibly from a wisely functioning heart.</p>
+        </article>
+        <article class="flow-card">
+          <span class="step">6</span>
+          <h3>Discernment</h3>
+          <p><strong>Evaluates alternatives.</strong> Recognizes which response is morally right and fitting for the particular situation.</p>
+        </article>
+        <article class="flow-card">
+          <span class="step">7</span>
+          <h3>Discretion</h3>
+          <p><strong>Plans and protects.</strong> Gathers relevant facts, forms a sound plan, and guards against danger.</p>
+        </article>
+        <article class="flow-card">
+          <span class="step">8</span>
+          <h3>Prudence</h3>
+          <p><strong>Anticipates and acts wisely.</strong> Looks ahead to consequences, dangers, and opportunities, then chooses an effective course.</p>
+        </article>
+      </div>
+
+      <div class="bookmark-synthesis" aria-label="How the wisdom capacities work together">
+        <div class="bookmark-synthesis-head">
+          <span class="label">HOW THEY WORK TOGETHER</span>
+          <h3>The bookmark framework, expanded for the website</h3>
+          <p>The order above follows the printed bookmark. It is a teaching arrangement, not a claim that Proverbs presents these as a rigid eight-step sequence or as eight completely separate Hebrew categories.</p>
+        </div>
+
+        <div class="relationship-grid">
+          <article class="relationship-card">
+            <span class="label">SUPPORTING FRAMEWORK</span>
+            <h3>Heart — the inner control center</h3>
+            <p><em>Lēb</em> means <strong>heart</strong>, but the biblical heart includes thinking, understanding, desiring, choosing, feeling, judgment, and what we would often call the <strong>mind</strong>. It is the inner center in which the wisdom capacities operate.</p>
+          </article>
+          <article class="relationship-card">
+            <span class="label">SUPPORTING FRAMEWORK</span>
+            <h3>Instruction — the formative means</h3>
+            <p>Teaching, correction, discipline, and training that develop wisdom and character.</p>
+          </article>
+          <article class="relationship-card">
+            <span class="label">SUPPORTING FRAMEWORK</span>
+            <h3>Counsel — deliberative guidance</h3>
+            <p>Advice and strategic guidance that assist wise judgment.</p>
+          </article>
+        </div>
+
+        <p class="synthesis-summary"><strong>How they work together:</strong> The <strong>heart</strong> receives <strong>instruction</strong> and <strong>counsel</strong>, acquires <strong>knowledge</strong>, develops <strong>understanding</strong> and <strong>insight</strong>, produces <strong>sense</strong>, and exercises <strong>discernment</strong>, <strong>discretion</strong>, and <strong>prudence</strong>—all under the governing virtue of <strong>wisdom</strong>.</p>
+
+        <p class="synthesis-summary"><strong>The essential qualification:</strong> These capacities become true wisdom when governed by the <strong>fear of Yahweh</strong> and directed toward what is <strong>right, just, and fair</strong> (Prov. 1:3, 7; 9:10).</p>
+      </div>
+
+
+      <div class="system-begins" aria-label="Proverbs 1:4 wisdom system begins">
+        <div class="system-begins-head">
+          <span class="label">THE WISDOM SYSTEM BEGINS</span>
+          <h3>Proverbs 1:4 shows what the book is trying to build in an inexperienced person.</h3>
+          <p>Proverbs 1:2–6 functions as a purpose statement for the book: wisdom, insight, instruction, righteousness, justice, equity, prudence, knowledge, discretion, and continued learning are all brought into view. Verse 4 focuses especially on forming the inexperienced before folly becomes a settled way of life.</p>
+        </div>
+
+        <div class="system-begins-verse">
+          <blockquote>“To give <strong>prudence</strong> to the simple, <strong>knowledge</strong> and <strong>discretion</strong> to the youth.”</blockquote>
+          <cite>Proverbs 1:4 (ESV)</cite>
+        </div>
+
+        <div class="simple-note">
+          <p><strong>The simple — <em>petî</em> (פֶּתִי, H6612):</strong> inexperienced, open, and easily influenced. The simple person is not presented here as unintelligent; he is unformed and therefore vulnerable to whichever voices shape him. A useful teaching picture is <strong>wet concrete: what presses into it leaves an impression.</strong></p>
+        </div>
+
+        <div class="system-begins-grid">
+          <article class="system-begins-card">
+            <span class="label">PRUDENCE</span>
+            <h4><span lang="he">עָרְמָה</span> — <em>ʿormâ</em> <small>(H6195)</small></h4>
+            <p><strong>Sees ahead.</strong> Learns to anticipate consequences, danger, and opportunity rather than merely reacting after the fact.</p>
+          </article>
+          <article class="system-begins-card">
+            <span class="label">KNOWLEDGE</span>
+            <h4><span lang="he">דַּעַת</span> — <em>daʿat</em> <small>(H1847)</small></h4>
+            <p><strong>Knows what is true.</strong> Supplies the truth and moral orientation by which situations, choices, and paths can be evaluated.</p>
+          </article>
+          <article class="system-begins-card">
+            <span class="label">DISCRETION</span>
+            <h4><span lang="he">מְזִמָּה</span> — <em>mĕzimmâ</em> <small>(H4209)</small></h4>
+            <p><strong>Forms a considered plan.</strong> Thinks through a course of action rather than moving impulsively or without regard for consequences.</p>
+          </article>
+        </div>
+
+        <div class="system-begins-summary">
+          <p><strong>How they work together:</strong> Knowledge provides truth. Prudence looks ahead. Discretion plans accordingly. Proverbs takes the inexperienced person and teaches him to know what is true, see where choices lead, and form a wise course of action.</p>
+        </div>
+
+        <div class="voice-note">
+          <h4>Why Proverbs 1:7 must govern Proverbs 1:4</h4>
+          <p>These abilities are not automatically virtuous. Shrewdness can become manipulation, and careful planning can become scheming. Proverbs 1:7 supplies the essential qualification: the fear of Yahweh gives knowledge, prudence, and discretion their proper theological and moral direction.</p>
+          <p><strong>Proverbs 1:4 shows what Proverbs is trying to build. Proverbs 2:10–11 shows those capacities becoming internal guardians. Proverbs 14:8 shows the mature person using them to evaluate his path.</strong></p>
+        </div>
+      </div>
+
+      <div class="system-guardian" aria-label="Proverbs 2:10–11 wisdom becomes a guardian">
+        <div class="system-guardian-head">
+          <span class="label">WISDOM BECOMES A GUARDIAN</span>
+          <h3>Proverbs 2:10–11 shows wisdom moving from instruction into the inner life.</h3>
+          <p>After urging the son to seek wisdom like hidden treasure, Proverbs 2 says Yahweh gives wisdom. Then wisdom enters the heart and begins to protect the person from destructive paths.</p>
+        </div>
+
+        <div class="system-guardian-verse">
+          <blockquote>“For <strong>wisdom</strong> will come into your <strong>heart</strong>, and <strong>knowledge</strong> will be pleasant to your soul; <strong>discretion</strong> will watch over you, <strong>understanding</strong> will guard you.”</blockquote>
+          <cite>Proverbs 2:10–11 (ESV)</cite>
+        </div>
+
+        <div class="system-guardian-grid">
+          <article class="system-guardian-card">
+            <span class="label">DISCRETION</span>
+            <span class="hebrew-inline" lang="he">מְזִמָּה — <em>mĕzimmâ</em> <small>(H4209)</small></span>
+            <p><strong>Careful thought and considered planning.</strong> Here discretion is pictured as protective: a person who learns to think through a course of action is less easily drawn into a destructive path.</p>
+          </article>
+          <article class="system-guardian-card">
+            <span class="label">UNDERSTANDING</span>
+            <span class="hebrew-inline" lang="he">תְּבוּנָה — <em>tĕvûnâ</em> <small>(H8394)</small></span>
+            <p><strong>Grasping what a situation means.</strong> Understanding recognizes relationships, implications, and where a course of action is likely to lead.</p>
+          </article>
+        </div>
+
+        <div class="guardian-summary">
+          <p><strong>Discretion watches. Understanding guards.</strong></p>
+          <p>Solomon pictures these wisdom capacities as sentries over the inner life. Wisdom is not merely information stored in the mind; once it enters the heart, it begins shaping judgment before action is taken.</p>
+        </div>
+
+        <div class="guardian-protection">
+          <h4>What does wisdom protect us from?</h4>
+          <p>The rest of Proverbs 2 makes the protection concrete. Wisdom equips the person to recognize and avoid:</p>
+          <ul>
+            <li>corrupt people and crooked paths (vv. 12–15),</li>
+            <li>sexual temptation and covenant unfaithfulness (vv. 16–19).</li>
+          </ul>
+        </div>
+
+        <div class="action-note">
+          <p><strong>Heart connection:</strong> “Wisdom will come into your heart” (2:10) fits the Proverbs picture of the <em>lēb</em> as the inner control center—including what we commonly call the <strong>mind</strong>, but also desire, intention, judgment, and moral direction. Biblical wisdom is not complete when it has merely been heard; it must become inwardly formative.</p>
+        </div>
+
+        <div class="voice-note">
+          <h4>Prudence and discretion are related, but they are not the same Hebrew word.</h4>
+          <p>Proverbs 1:4 uses <em>ʿormâ</em> (<strong>H6195</strong>) for “prudence” and <em>mĕzimmâ</em> (<strong>H4209</strong>) for “discretion.” Their functions overlap, but the distinction is useful: <strong>prudence looks ahead and anticipates where a course may lead; discretion thinks through and forms the plan.</strong></p>
+        </div>
+
+        <div class="guardian-sequence" aria-label="Proverbs wisdom formation sequence">
+          <div><strong>Proverbs 1:4</strong>Wisdom capacities are being formed.</div>
+          <div><strong>Proverbs 2:10–11</strong>Wisdom enters the heart and begins guarding.</div>
+          <div><strong>Proverbs 14:8</strong>The prudent person evaluates his way.</div>
+        </div>
+
+        <p class="fool-contrast"><strong>Teaching synthesis:</strong> God’s wisdom does not protect us merely by removing danger. It forms within us the judgment to recognize danger and avoid it.</p>
+      </div>
+
+      <div class="system-action" aria-label="Proverbs 14:8 wisdom system in action">
+        <div class="system-action-head">
+          <span class="label">THE WISDOM SYSTEM IN ACTION</span>
+          <h3>Proverbs 14:8 brings wisdom, prudence, and discernment together.</h3>
+          <p>This single verse shows why the capacities can be distinguished for teaching while still overlapping in the underlying Hebrew vocabulary.</p>
+        </div>
+
+        <div class="system-action-verse">
+          <blockquote>“The <strong>wisdom</strong> of the <strong>prudent</strong> is to <strong>discern</strong> his way, but the folly of fools is deceiving.”</blockquote>
+          <cite>Proverbs 14:8 (ESV)</cite>
+        </div>
+
+        <div class="system-action-grid">
+          <article class="system-action-card">
+            <span class="label">WISDOM</span>
+            <span class="hebrew-inline" lang="he">חָכְמַת — <em>ḥokmat</em> <small>(from חָכְמָה, H2451)</small></span>
+            <p>The governing skill of living rightly and effectively within Yahweh’s created and moral order. Wisdom is the overall competence that directs the other capacities toward a godly end.</p>
+          </article>
+          <article class="system-action-card">
+            <span class="label">PRUDENT</span>
+            <span class="hebrew-inline" lang="he">עָרוּם — <em>ʿārûm</em> <small>(H6175)</small></span>
+            <p>The shrewd, observant person who looks ahead, notices danger and opportunity, considers consequences, and does not act impulsively. The Hebrew word can describe shrewdness more generally; its moral direction depends on how that ability is used.</p>
+          </article>
+          <article class="system-action-card">
+            <span class="label">DISCERN</span>
+            <span class="hebrew-inline" lang="he">הָבִין — <em>hābîn</em> (from <em>bîn</em>, H995)</span>
+            <p>To perceive, understand, distinguish, and evaluate. Here the ESV translates a form from the <em>bîn</em> word family as “discern,” which is a good example of the overlap among the English categories used throughout this study.</p>
+          </article>
+        </div>
+
+        <div class="action-progression" aria-label="Proverbs 14:8 progression">
+          <div><strong>Wisdom</strong>provides the governing skill.</div>
+          <div><strong>Prudence</strong>looks ahead at the path.</div>
+          <div><strong>Discernment</strong>evaluates that path before proceeding.</div>
+        </div>
+
+        <div class="action-note">
+          <p><strong>Lexical reminder:</strong> Proverbs 14:8 is especially helpful because the ESV says “discern,” while the Hebrew uses a form of <em>bîn</em>—the same word family associated elsewhere with <em>understanding</em> and <em>insight</em>. The English labels are useful teaching distinctions, but the Hebrew categories overlap.</p>
+        </div>
+
+        <div class="way-questions">
+          <h4>What does it mean to “discern his way”?</h4>
+          <p>“His way” (<em>darkô</em>, from <em>derek</em>, <strong>H1870</strong>) is his course of life—his conduct, decisions, and direction. The prudent person learns to ask:</p>
+          <ul>
+            <li>Where is this choice leading?</li>
+            <li>What consequences are likely to follow?</li>
+            <li>Does this align with Yahweh’s wisdom?</li>
+            <li>Is this the path I should walk?</li>
+          </ul>
+        </div>
+
+        <p class="fool-contrast"><strong>The contrast:</strong> the prudent person examines the road ahead; the fool is deceived. Wisdom does not merely react to life—it thoughtfully evaluates the path before taking it.</p>
+      </div>
+
+    </section>
+
+    <section id="terms" class="section section-muted">
+      <div class="shell">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="eyebrow">WORD STUDIES</p>
+            <h2>Hebrew vocabulary behind the English wording</h2>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input id="term-search" type="search" placeholder="Try prudence, lēb, H6191…" autocomplete="off" />
+          </label>
+        </div>
+        <div id="term-grid" class="term-grid"></div>
+        <p id="no-results" class="no-results" hidden>No matching terms found.</p>
+      </div>
+    </section>
+
+    <section id="compare" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">COMPARE TERMS</p>
+        <h2>Related, but not identical</h2>
+        <p>These comparisons sharpen the recurring emphases represented by the ESV’s English wording. They are interpretive aids rather than rigid lexical boundaries: context, Hebrew word family, and semantic range remain controlling.</p>
+      </div>
+      <div class="compare-grid" id="compare-grid"></div>
+    </section>
+
+    <section id="fear" class="section fear-section">
+      <div class="shell fear-grid">
+        <div>
+          <p class="eyebrow">THE FOUNDATION OF WISDOM</p>
+          <h2>The fear of Yahweh gives the whole wisdom system its direction.</h2>
+          <p class="lead-small">The Hebrew expression <strong>יִרְאַת יְהוָה (<em>yirʾat YHWH</em>)</strong>—<em>yirʾâ</em> <strong>H3374</strong> + YHWH <strong>H3068</strong>—includes reverence and awe, but it is stronger than simple respect. It takes Yahweh’s holiness, authority, judgment, and displeasure seriously, and it leads to humility, trust, obedience, and refuge in him.</p>
+
+          <div class="fear-definition">
+            <strong>Nutshell:</strong> Yahweh is God, I am accountable to him, and his word has the right to shape how I think and live.
+          </div>
+
+          <div class="fear-quote">
+            <blockquote>“Apart from God there is no true insight into the world.” “Everything must be understood in relationship to Yahweh himself.”</blockquote>
+            <cite>— Tremper Longman III, <em>Proverbs</em>, Introduction</cite>
+          </div>
+
+          <div class="fear-quote">
+            <blockquote>“The fear of Yahweh is foundational because one cannot understand reality correctly while excluding the One who created and governs it.”</blockquote>
+            <cite>— Teaching summary</cite>
+          </div>
+        </div>
+
+        <div class="fear-points">
+          <article><strong>Proverbs 1:7</strong><span>The fear of Yahweh is the beginning of knowledge. Biblical knowledge starts by recognizing who God is.</span></article>
+          <article><strong>Proverbs 9:10</strong><span>The fear of Yahweh is the beginning of wisdom. It is not one more skill; it is the foundation beneath the skills.</span></article>
+          <article><strong>Proverbs 8:13</strong><span>Fearing Yahweh changes conduct: it means hating evil, pride, arrogance, and crooked speech.</span></article>
+          <article><strong>Proverbs 14:26–27</strong><span>The God whom the righteous fear is also the God in whom they find confidence, refuge, and life.</span></article>
+        </div>
+
+        <div class="fear-expanded">
+          <div class="fear-dimensions">
+            <article>
+              <h3>We do not run from Yahweh—we run to him</h3>
+              <p>Biblical fear takes God’s holiness, authority, judgment, and our accountability seriously. But for the person who trusts Yahweh, that fear does not end in hiding from him. The God we fear is also our refuge (Prov. 14:26–27), so we run <strong>to</strong> him in humility, trust, and obedience.</p>
+            </article>
+            <article>
+              <h3>It changes how we think and how we live</h3>
+              <p>Proverbs does not ask only, “Will this work?” It asks, “Is this right before Yahweh?” Fear of Yahweh keeps intelligence from becoming pride, shrewdness from becoming manipulation, and planning from becoming scheming.</p>
+            </article>
+          </div>
+
+          <div class="fear-bottom-line">
+            <p><strong>The essential qualification:</strong> Knowledge, understanding, prudence, discernment, discretion, and skill become genuinely biblical wisdom when they are governed by the fear of Yahweh and directed toward what is right, just, and fair.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="proverbs9" class="section two-invitations">
+      <div class="shell">
+        <div class="invitation-intro">
+          <p class="eyebrow">PROVERBS 9 · TWO INVITATIONS</p>
+          <h2>Two houses. Two meals. Two ways of life. Two destinations.</h2>
+          <p>Proverbs 1–9 reaches its climax with two women calling to the same inexperienced person. Wisdom and Folly can sound similar at first—they both have a house, both call from the heights of the city, and both invite the simple to a meal. The similarities force the reader to look past the invitation and ask what kind of life, character, and destination each table produces.</p>
+        </div>
+
+        <div class="invitation-grid">
+          <article class="invitation-house wisdom-house">
+            <span class="label">WOMAN WISDOM · PROV. 9:1–6</span>
+            <h3>Wisdom builds, prepares, gives, and calls toward life.</h3>
+            <ul>
+              <li>She has <strong>built her house</strong> and hewn its seven pillars.</li>
+              <li>She has prepared meat, mixed wine, and set her table.</li>
+              <li>She sends servants out to call the inexperienced.</li>
+              <li>Her invitation requires a change of direction: leave simple ways, live, and walk in insight.</li>
+            </ul>
+            <div class="invitation-destination">Destination: life, growth, and insight.</div>
+          </article>
+
+          <article class="invitation-house folly-house">
+            <span class="label">WOMAN FOLLY · PROV. 9:13–18</span>
+            <h3>Folly imitates the invitation but conceals the destination.</h3>
+            <ul>
+              <li>She is loud, seductive, and ignorant.</li>
+              <li>She sits at the door and calls to people who are trying to go straight on their way.</li>
+              <li>She offers what is stolen and secret as though forbiddenness itself makes it desirable.</li>
+              <li>Her guests do not see where the meal actually ends.</li>
+            </ul>
+            <div class="invitation-destination">Destination: death and the depths of Sheol—the Old Testament term for the realm of the dead.</div>
+          </article>
+        </div>
+
+        <div class="invitation-center">
+          <h3>The center of the chapter explains the difference — Proverbs 9:7–12</h3>
+          <p>The wise person receives correction and becomes wiser; the scoffer resists correction. At the center stands the controlling truth: <strong>“The fear of the LORD is the beginning of wisdom” (9:10).</strong></p>
+          <p>The issue is therefore deeper than which invitation looks more attractive. It is whether the heart is teachable before Yahweh and willing to receive his definition of life.</p>
+        </div>
+
+        <div class="longman-9">
+          <h3>Longman’s insight: chapter 9 forces a decision.</h3>
+          <p>Longman observes that Woman Wisdom and Woman Folly both issue dinner invitations, with an intimacy that suggests more than sampling an idea. The reader is being asked which wisdom will become part of his life. His memorable question is: <strong>“With whom will we dine?”</strong></p>
+          <p>Longman also treats this choice as important background for the individual sayings that begin in chapter 10. The later proverbs are not detached tips; they show what life looks like when a person has begun to live at Wisdom’s table—or Folly’s.</p>
+          <a href="https://www.christianstudylibrary.org/files/pub/book_previews/Tremper-Logman_Proverbs_Introduction.pdf" target="_blank" rel="noopener">Longman, <em>Proverbs</em> introduction ↗</a>
+        </div>
+
+        <div class="mentoring-bridge">
+          <p><strong>A useful mentoring question:</strong> Many recurring struggles in Proverbs—anger, sexual immorality, destructive speech, pride, money, laziness, and bad companionship—can be approached by asking, <strong>“Which voice am I listening to, and at whose table am I learning to live?”</strong> Proverbs does not merely suppress bad behavior; it forms a person who increasingly recognizes Wisdom’s voice and rejects Folly’s invitation.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="jesus-wisdom" class="section shell" aria-labelledby="jesus-wisdom-title">
+      <div class="section-heading">
+        <p class="eyebrow">READING SOLOMON’S WISDOM AS CHRISTIANS</p>
+        <h2 id="jesus-wisdom-title">Longman connects Proverbs’ wisdom to Jesus—but carefully.</h2>
+        <p>Proverbs should first be heard in its Old Testament setting. But Longman argues that Christian readers should also notice how the New Testament presents Jesus as the fullest expression of God’s wisdom.</p>
+      </div>
+
+      <div class="bookmark-synthesis">
+        <div class="relationship-grid">
+          <article class="relationship-card">
+            <span class="label">GREATER THAN SOLOMON</span>
+            <h3>Jesus is the wiser king.</h3>
+            <p>Jesus points to Solomon’s wisdom and then says that “something greater than Solomon” is present (Luke 11:31). The Gospels present him not merely as another wisdom teacher, but as one whose wisdom surpasses Solomon’s.</p>
+          </article>
+          <article class="relationship-card">
+            <span class="label">GOD’S WISDOM IN CHRIST</span>
+            <h3>The New Testament centers wisdom in Jesus.</h3>
+            <p>Paul calls Christ the wisdom of God (1 Cor. 1:24, 30) and says that in him are hidden “all the treasures of wisdom and knowledge” (Col. 2:3). Longman sees these texts as central to a Christian reading of biblical wisdom.</p>
+          </article>
+          <article class="relationship-card">
+            <span class="label">WISDOM OR FOLLY</span>
+            <h3>The invitation becomes deeply personal.</h3>
+            <p>Longman says that, for the Christian reader, “the gospel choice is a decision whether to follow Jesus.” The invitation of Woman Wisdom therefore helps Christians see the call to receive God’s wisdom ultimately in relationship with Christ.</p>
+          </article>
+        </div>
+
+        <div class="voice-note">
+          <h4>An important guardrail</h4>
+          <p>Longman does <strong>not</strong> say that Woman Wisdom in Proverbs 8 is literally Jesus before the incarnation. Proverbs 8 is poetic personification. His point is that the New Testament deliberately uses wisdom language to show that <strong>Jesus embodies God’s wisdom</strong>.</p>
+        </div>
+
+        <p class="synthesis-summary"><strong>Why this matters for this study:</strong> Solomon teaches what wisdom looks like in God’s world; the New Testament presents Jesus as the one in whom God’s wisdom is perfectly embodied. Proverbs trains the reader to desire wisdom, recognize folly, and walk the wise path; the gospel calls the Christian to follow the One who is greater than Solomon.</p>
+
+        <div class="voice-note">
+          <h4>We do not fight folly in our own strength.</h4>
+          <p>Proverbs tells us what wisdom looks like and exposes the paths that lead to ruin. But the New Testament does not leave the Christian with a bare command to “try harder.” Jesus says that apart from him we can do nothing (John 15:5), Paul says that God is at work in believers “to will and to work” for his good pleasure (Phil. 2:13), and he describes his own ministry as struggling with Christ’s power working within him (Col. 1:29).</p>
+          <p>That means the battles described in Practical Wisdom—pride, anger, sexual temptation, destructive speech, greed, envy, and the rest—are fought through active obedience <strong>with God’s help</strong>, not by self-reliance alone. God provides a way of escape in temptation (1 Cor. 10:13), and by the Spirit believers put sinful patterns to death (Rom. 8:13).</p>
+          <div class="verse-chips" style="margin-top:14px">
+            <span class="verse-chip">John 15:5</span>
+            <span class="verse-chip">Phil. 2:13</span>
+            <span class="verse-chip">Col. 1:29</span>
+            <span class="verse-chip">1 Cor. 10:13</span>
+            <span class="verse-chip">Rom. 8:13</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="practical" class="section shell practical-section">
+      <div class="practical-intro">
+        <p class="eyebrow">PRACTICAL WISDOM</p>
+        <h2>Where Proverbs meets recurring struggles.</h2>
+        <p>Proverbs is intensely practical. Derek Kidner famously described its teaching as <strong>“truth in street clothes.”</strong> These studies gather related sayings into themes so they can be used personally, in mentoring, or in conversation with someone who needs more than a single proof-text.</p>
+        <p>The goal is not merely behavior management. Each topic asks what the heart loves, what path it is choosing, what consequences wisdom sees ahead, and how the fear of Yahweh reshapes the response.</p>
+        <p>Longman’s <em>Proverbs</em> commentary closes with a substantial topical-study appendix. That same thematic instinct shapes this section: recurring struggles are gathered across the book so the reader can see Proverbs’ cumulative wisdom rather than relying on one isolated verse.</p>
+      </div>
+
+      <div class="practical-topic-grid">
+<details class="practical-topic" open>
+          <summary>
+            <span class="topic-label">PRIDE & SELF-DECEPTION</span>
+            <div>
+              <h3>The posture beneath much of folly</h3>
+              <p>Pride and self-centeredness put our own judgment, desires, and importance ahead of Yahweh. That posture feeds many other struggles because it resists correction, trusts itself, and asks first, “What do I want?” rather than, “What is right before God?”</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 3:5–7</span><span class="verse-chip">Prov. 8:13</span><span class="verse-chip">Prov. 11:2</span><span class="verse-chip">Prov. 12:15</span><span class="verse-chip">Prov. 16:5</span><span class="verse-chip">Prov. 16:18</span><span class="verse-chip">Prov. 18:12</span><span class="verse-chip">Prov. 21:2</span><span class="verse-chip">Prov. 26:12</span><span class="verse-chip">Prov. 27:2</span><span class="verse-chip">Prov. 29:23</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> pride does not merely think too highly of itself; it makes a person difficult to teach, quick to justify himself, and slow to see his own path accurately.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Fear of Yahweh rather than being “wise in your own eyes” (3:7).</li>
+                  <li>Openness to correction instead of reflexive self-defense (12:15).</li>
+                  <li>Humility before the fall arrives (16:18; 18:12).</li>
+                  <li>Suspicion of self-justification: a way may look right to us and still need Yahweh’s judgment (21:2).</li>
+                  <li>Freedom from needing to advertise our own goodness or importance (27:2).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman emphasizes that pride promotes the self and produces a defensiveness that blocks correction—one of the indispensable means by which Proverbs forms wisdom. The proud person therefore keeps repeating errors he is unwilling to hear exposed.</p>
+                <a href="https://www.bibleoutlines.com/proverbs-161-15-yahweh-sayings-and-royal-sayings/" target="_blank" rel="noopener">Longman on pride and correction ↗</a>
+              </article>
+              <article>
+                <h4>Fear of Yahweh</h4>
+                <p>Proverbs 8:13 makes the connection direct: fearing Yahweh includes hating pride and arrogance. Pride is therefore not merely a social flaw; it is a rival posture to creaturely dependence on God.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>When corrected, do I first try to understand—or first try to defend myself?</li>
+                <li>Where am I assuming that my motives and perspective are automatically reliable?</li>
+                <li>Whose opinion am I unwilling to hear because I have already decided I am right?</li>
+                <li>What would humility do if I were only 20 percent wrong?</li>
+                <li>Am I trying to protect my reputation, or become wise?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">ANGER</span>
+            <div>
+              <h3>From reaction to self-control</h3>
+              <p>Proverbs treats uncontrolled anger as a character issue: the fool vents, the hot-tempered person multiplies conflict, and the wise person learns to govern his spirit.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 14:29</span><span class="verse-chip">Prov. 15:1</span><span class="verse-chip">Prov. 15:18</span><span class="verse-chip">Prov. 16:32</span><span class="verse-chip">Prov. 17:14</span><span class="verse-chip">Prov. 19:11</span><span class="verse-chip">Prov. 22:24–25</span><span class="verse-chip">Prov. 29:11</span><span class="verse-chip">Prov. 29:22</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> anger narrows perception and accelerates action; wisdom lengthens the distance between provocation and response.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Slowness rather than immediate reaction.</li>
+                  <li>Self-rule rather than emotional venting (16:32; 29:11).</li>
+                  <li>A soft answer that de-escalates rather than feeds conflict (15:1).</li>
+                  <li>The judgment to overlook some offenses rather than treating every irritation as a battle (19:11).</li>
+                  <li>Awareness that angry companions can train us into their patterns (22:24–25).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="theologian-note">
+              <article>
+                <h4>Waltke</h4>
+                <p>Waltke places the hot-tempered person among the character types that fail to enjoy the ordered life Proverbs commends. Anger is therefore not merely an isolated outburst; it belongs to a larger path of character, action, and consequence.</p>
+                <a href="https://biblicalelearning.org/wp-content/uploads/2022/01/Waltke-ProvTooMuch-AUS.htm" target="_blank" rel="noopener">Waltke on Proverbs’ character–consequence pattern ↗</a>
+              </article>
+              <article>
+                <h4>MacArthur</h4>
+                <p>MacArthur repeatedly emphasizes the practical wisdom of Proverbs 15:1 and 18:13: gentleness and listening interrupt the cycle that reactive speech and anger keep escalating. Anger may sometimes have a righteous object, but it becomes sinful when self-rule is lost or evil is repaid with evil.</p>
+                <a href="https://www.gty.org/articles/A384/for-the-love-of-the-truth" target="_blank" rel="noopener">MacArthur on gentle speech and reaction ↗</a>
+              </article>
+            </div>
+
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What am I wanting so badly in this moment that I believe anger will get it for me?</li>
+                <li>Am I responding to actual evil—or to inconvenience, wounded pride, loss of control, or unmet expectations?</li>
+                <li>What will this response produce five minutes from now? Five days from now?</li>
+                <li>Would wisdom have me answer softly, remain silent, overlook the offense, confront it calmly, or wait?</li>
+                <li>Is my anger governing me, or am I governing my spirit?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">SEXUAL INTEGRITY</span>
+            <div>
+              <h3>Learn to see the end of the path before taking the first step</h3>
+              <p>Proverbs 5–7 does not treat sexual temptation as a harmless private appetite. It trains the son to see allure, deception, secrecy, covenant betrayal, and the destination of the path.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 2:16–19</span><span class="verse-chip">Prov. 5:1–23</span><span class="verse-chip">Prov. 6:20–35</span><span class="verse-chip">Prov. 7:1–27</span><span class="verse-chip">Prov. 9:13–18</span><span class="verse-chip">Prov. 22:14</span><span class="verse-chip">Prov. 23:27–28</span><span class="verse-chip">Prov. 30:20</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> temptation emphasizes the immediate sweetness; prudence and discernment force the mind to look all the way to the destination.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Distance from the path of temptation, not confidence in how close one can safely get (5:8).</li>
+                  <li>A memory trained to hold God’s words before temptation becomes urgent (7:1–5).</li>
+                  <li>Foresight: the ability to see loss, bondage, shame, and death hidden behind immediate pleasure.</li>
+                  <li>A positive vision of covenant delight rather than merely a list of prohibitions (5:15–20).</li>
+                  <li>Recognition that secrecy and forbiddenness are part of Folly’s sales pitch, not evidence that the offer is valuable (9:17–18).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman’s reading of Proverbs 1–9 helps place the sexual warnings inside the larger contest between Woman Wisdom and Woman Folly. The issue is not simply resisting one act; it is choosing what kind of relationship with wisdom or folly will shape the whole life.</p>
+                <a href="https://www.christianstudylibrary.org/files/pub/book_previews/Tremper-Logman_Proverbs_Introduction.pdf" target="_blank" rel="noopener">Longman on Woman Wisdom and Woman Folly ↗</a>
+              </article>
+              <article>
+                <h4>Waltke</h4>
+                <p>Waltke treats sexual morality as part of Proverbs’ larger moral order: the sexually moral and the sexually unclean travel different character–consequence paths. Proverbs teaches the reader to judge the act by its end, not merely by its immediate appeal.</p>
+                <a href="https://biblicalelearning.org/wp-content/uploads/2022/01/Waltke-ProvTooMuch-AUS.htm" target="_blank" rel="noopener">Waltke on the moral order of Proverbs ↗</a>
+              </article>
+            </div>
+
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What path am I already walking before the moment of temptation arrives?</li>
+                <li>What am I allowing my eyes, imagination, phone, friendships, or routines to rehearse?</li>
+                <li>Am I judging this temptation by the first five minutes—or by where Proverbs says the road ends?</li>
+                <li>What concrete distance from temptation does wisdom require rather than merely suggest?</li>
+                <li>What good, covenantal form of love and faithfulness should replace the counterfeit being offered?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">THE TONGUE</span>
+            <div>
+              <h3>Speech reveals the heart and shapes the room</h3>
+              <p>Proverbs treats words as moral actions. Speech can heal, destroy, reveal folly, conceal hatred, ignite conflict, preserve life, or expose the state of the heart.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 10:19</span><span class="verse-chip">Prov. 10:31–32</span><span class="verse-chip">Prov. 12:18</span><span class="verse-chip">Prov. 15:1–4</span><span class="verse-chip">Prov. 16:24</span><span class="verse-chip">Prov. 16:28</span><span class="verse-chip">Prov. 17:27–28</span><span class="verse-chip">Prov. 18:13</span><span class="verse-chip">Prov. 18:21</span><span class="verse-chip">Prov. 21:23</span><span class="verse-chip">Prov. 26:20–22</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> wisdom does not merely teach us what to say; it teaches when to speak, when to stop, how much to say, and what our words are trying to produce.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Restraint: an abundance of words increases the opportunity for sin (10:19).</li>
+                  <li>Timing and proportion: saying less can be wiser than saying everything one knows (17:27–28).</li>
+                  <li>Healing speech rather than cutting speech (12:18; 16:24).</li>
+                  <li>Listening before answering (18:13).</li>
+                  <li>Refusal to feed gossip, quarrels, and relational fires (16:28; 26:20–22).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman uses Proverbs 10:19 to illustrate the wisdom/folly contrast that follows chapter 9: uncontrolled talking is associated with wicked folly, while restraint of the lips is associated with insight. Speech becomes evidence of which wisdom is shaping the person.</p>
+                <a href="https://www.christianstudylibrary.org/files/pub/book_previews/Tremper-Logman_Proverbs_Introduction.pdf" target="_blank" rel="noopener">Longman, <em>Proverbs</em> introduction ↗</a>
+              </article>
+              <article>
+                <h4>MacArthur</h4>
+                <p>MacArthur stresses that speech reveals character because the mouth expresses what fills the heart. He also highlights Proverbs’ insistence that a soft answer, careful listening, and refusal to stir strife are marks of wisdom rather than weakness.</p>
+                <a href="https://www.gty.org/blogs/B200812/sins-corruption-of-our-conversation" target="_blank" rel="noopener">MacArthur on speech and the heart ↗</a>
+              </article>
+            </div>
+
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What does the way I speak reveal about what is presently ruling my heart?</li>
+                <li>Am I speaking because something needs to be said—or because I need to discharge emotion?</li>
+                <li>Is what I am about to say true, necessary, proportionate, and timely?</li>
+                <li>Would fewer words be wiser here?</li>
+                <li>Will these words heal, clarify, correct, protect, or merely wound and inflame?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">CONFLICT & QUARRELS</span>
+            <div>
+              <h3>Wisdom learns when to engage, when to de-escalate, and when to walk away</h3>
+              <p>Proverbs treats conflict as more than disagreement. Pride, anger, careless words, gossip, and needless involvement can all turn a manageable problem into a destructive quarrel.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 10:12</span><span class="verse-chip">Prov. 15:1</span><span class="verse-chip">Prov. 17:9</span><span class="verse-chip">Prov. 17:14</span><span class="verse-chip">Prov. 18:17</span><span class="verse-chip">Prov. 20:3</span><span class="verse-chip">Prov. 25:8–10</span><span class="verse-chip">Prov. 26:17</span><span class="verse-chip">Prov. 26:20–21</span><span class="verse-chip">Prov. 29:22</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> conflict becomes dangerous when the goal shifts from solving the problem to defending pride, winning, venting, or recruiting others to our side.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>A soft answer when escalation serves no good purpose (15:1).</li>
+                  <li>The ability to stop a quarrel early rather than proving we can finish it (17:14).</li>
+                  <li>A willingness to hear both sides before settling on a judgment (18:17).</li>
+                  <li>The maturity to leave another person’s fight alone when it is not ours to enter (26:17).</li>
+                  <li>Refusal to keep relational fires alive through gossip and repeated retelling (26:20–21).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman’s topical approach to emotions and relationships fits Proverbs’ realism: wisdom is not emotionless, but it learns how anger, pride, words, and timing affect the outcome of conflict.</p>
+              </article>
+              <article>
+                <h4>Kidner</h4>
+                <p>Kidner repeatedly highlights Proverbs’ practical restraint: wisdom often shows itself by refusing to feed a quarrel, by keeping a confidence, or by choosing the right moment and manner to speak.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What outcome am I actually trying to produce in this conflict?</li>
+                <li>Am I trying to solve the problem—or win the argument?</li>
+                <li>Have I heard the other side well enough to state it fairly?</li>
+                <li>Would wisdom tell me to answer, wait, overlook, confront privately, or disengage?</li>
+                <li>Who am I involving that does not need to be involved?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">COMPANIONSHIP & FRIENDSHIP</span>
+            <div>
+              <h3>People shape the path you learn to walk</h3>
+              <p>Proverbs assumes that character is contagious. Companions can train us toward wisdom, anger, violence, gossip, foolishness, loyalty, courage, or correction.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 1:10–19</span><span class="verse-chip">Prov. 12:26</span><span class="verse-chip">Prov. 13:20</span><span class="verse-chip">Prov. 17:17</span><span class="verse-chip">Prov. 18:24</span><span class="verse-chip">Prov. 22:24–25</span><span class="verse-chip">Prov. 27:5–6</span><span class="verse-chip">Prov. 27:9–10</span><span class="verse-chip">Prov. 27:17</span><span class="verse-chip">Prov. 28:7</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> friendship is not spiritually neutral. The people whose approval we value eventually help shape what seems normal, admirable, funny, tolerable, or desirable.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Discernment before entering a group whose path is already clear (1:10–19).</li>
+                  <li>Deliberate companionship with wise people (13:20).</li>
+                  <li>Refusal to apprentice ourselves to uncontrolled anger (22:24–25).</li>
+                  <li>Friends who love enough to wound honestly rather than flatter destructively (27:5–6).</li>
+                  <li>Long-term investment in relationships that provide faithful counsel and help in trouble (27:9–10).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman stresses that friends and neighbors form a community that helps a person navigate life’s difficulties. Proverbs therefore treats relationships as part of wisdom formation, not merely as social preference.</p>
+                <a href="https://www.richlandcreek.com/article/what-proverbs-says-about-friendships" target="_blank" rel="noopener">Longman on the importance of friendship ↗</a>
+              </article>
+              <article>
+                <h4>Kidner</h4>
+                <p>Kidner’s concise reading of Proverbs repeatedly highlights the realism of friendship: faithful love includes presence in adversity, truthful correction, and mutual sharpening—not merely affirmation.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>Who is presently discipling my appetites, reactions, humor, and ambitions simply by being around me?</li>
+                <li>Do my closest companions make wisdom easier or harder?</li>
+                <li>Who has permission to tell me something I do not want to hear?</li>
+                <li>Am I being a friend who strengthens another person’s wisdom—or merely confirms him?</li>
+                <li>Which relationships require greater distance, and which require greater investment?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">TEACHABILITY & CORRECTION</span>
+            <div>
+              <h3>Wisdom grows in people who can hear and change</h3>
+              <p>One of Proverbs’ sharpest divides between the wise and the fool is not how much they already know, but what they do when someone corrects them.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 9:7–9</span><span class="verse-chip">Prov. 10:17</span><span class="verse-chip">Prov. 12:1</span><span class="verse-chip">Prov. 12:15</span><span class="verse-chip">Prov. 13:10</span><span class="verse-chip">Prov. 15:22</span><span class="verse-chip">Prov. 15:31–33</span><span class="verse-chip">Prov. 19:20</span><span class="verse-chip">Prov. 27:5–6</span><span class="verse-chip">Prov. 28:23</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> correction reveals the heart. The same rebuke can make one person wiser and another person harder.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Love of instruction rather than resentment toward the one who gives it (12:1).</li>
+                  <li>Counsel sought before plans harden into commitments (15:22).</li>
+                  <li>Humility that can separate the sting of correction from the value of correction.</li>
+                  <li>Gratitude for a faithful friend who risks the relationship to tell the truth (27:5–6).</li>
+                  <li>A life in which being corrected today makes tomorrow’s decisions wiser (19:20).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman connects openness to counsel with humility and the absence of pride. Folly assumes its own way is right; wisdom remains willing to hear another person’s assessment.</p>
+                <a href="https://www.bibleoutlines.com/wp-content/uploads/proverbs.pdf" target="_blank" rel="noopener">Longman on Proverbs 12:15 and counsel ↗</a>
+              </article>
+              <article>
+                <h4>Proverbs 9 connection</h4>
+                <p>The center of the Wisdom/Folly chapter turns on correction: the wise person receives reproof and grows, while the scoffer attacks the messenger. Teachability shows which table is forming us.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>Who is allowed to correct me without being punished for it?</li>
+                <li>Do I evaluate correction by whether it is true—or by whether I like the person’s tone?</li>
+                <li>What criticism have I heard more than once from different people?</li>
+                <li>What would change this week if I assumed there is something here I need to learn?</li>
+                <li>Am I more committed to being seen as wise or to becoming wise?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">LAZINESS & DILIGENCE</span>
+            <div>
+              <h3>Small refusals accumulate into a neglected life</h3>
+              <p>The sluggard is one of Proverbs’ most memorable characters because laziness rationalizes delay, exaggerates obstacles, loves comfort, and then acts surprised when neglected responsibilities produce consequences.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 6:6–11</span><span class="verse-chip">Prov. 10:4–5</span><span class="verse-chip">Prov. 12:24</span><span class="verse-chip">Prov. 13:4</span><span class="verse-chip">Prov. 18:9</span><span class="verse-chip">Prov. 20:4</span><span class="verse-chip">Prov. 21:25–26</span><span class="verse-chip">Prov. 22:13</span><span class="verse-chip">Prov. 24:30–34</span><span class="verse-chip">Prov. 26:13–16</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> laziness often looks harmless in the moment; prudence sees what repeated delay is quietly building.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Initiative without needing constant external pressure (6:6–8).</li>
+                  <li>Willingness to do today’s work before tomorrow’s need arrives (20:4).</li>
+                  <li>Suspicion of excuses that make ordinary responsibility sound impossible (22:13; 26:13).</li>
+                  <li>Diligence that treats neglected work as a moral and communal issue, not merely a productivity issue (18:9).</li>
+                  <li>A realistic distinction between true laziness and inability, injustice, illness, or lack of opportunity.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman treats true laziness as deeply foolish because it predictably harms both the individual and the community. He also cautions against assuming that every person who lacks work or resources is lazy; Proverbs itself recognizes causes of poverty beyond sloth.</p>
+                <a href="https://www.bibleoutlines.com/proverbs-2423-34-appendix-to-words-of-the-wise/" target="_blank" rel="noopener">Longman on the sluggard ↗</a>
+              </article>
+              <article>
+                <h4>Prudence connection</h4>
+                <p>The diligent person sees several moves ahead. The sluggard repeatedly chooses present ease over future responsibility; prudence reverses that priority.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What responsibility am I repeatedly postponing because discomfort feels more important than duty?</li>
+                <li>Which of my reasons are legitimate limitations, and which are polished excuses?</li>
+                <li>What will be overgrown in six months if I keep doing nothing?</li>
+                <li>What is the next concrete task—not the whole project—that wisdom requires today?</li>
+                <li>Who else eventually pays for my neglect?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">MONEY, GREED & CONTENTMENT</span>
+            <div>
+              <h3>Money exposes what we trust, love, fear, and value</h3>
+              <p>Proverbs neither romanticizes poverty nor treats wealth as proof of righteousness. It asks how money is acquired, used, shared, desired, and trusted.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 3:9–10</span><span class="verse-chip">Prov. 10:2–4</span><span class="verse-chip">Prov. 11:4</span><span class="verse-chip">Prov. 11:24–28</span><span class="verse-chip">Prov. 13:11</span><span class="verse-chip">Prov. 15:16–17</span><span class="verse-chip">Prov. 16:8</span><span class="verse-chip">Prov. 22:1–2</span><span class="verse-chip">Prov. 23:4–5</span><span class="verse-chip">Prov. 28:20–22</span><span class="verse-chip">Prov. 30:7–9</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> wisdom cares not only whether we possess resources, but what those resources are doing to our character and relationships.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Honest gain rather than profit detached from righteousness (16:8).</li>
+                  <li>Generosity rather than the illusion that hoarding guarantees security (11:24–28).</li>
+                  <li>Patient accumulation rather than “get rich quick” urgency (13:11; 28:20–22).</li>
+                  <li>Contentment that knows wealth can disappear quickly (23:4–5).</li>
+                  <li>Compassion for the poor without assuming poverty always proves foolishness.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman uses “Money Matters” as his model chapter for studying themes across Proverbs. He also notes that Proverbs can attribute poverty to laziness in some cases while recognizing injustice in others—an important guard against simplistic moral judgments.</p>
+                <a href="https://www.ivpress.org/how-to-read-proverbs" target="_blank" rel="noopener">Longman, <em>How to Read Proverbs</em> ↗</a>
+              </article>
+              <article>
+                <h4>Waltke</h4>
+                <p>Waltke repeatedly locates economics inside Proverbs’ moral order: righteousness, generosity, diligence, honest scales, and care for the vulnerable are all wisdom issues.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What does my spending reveal that I believe will make life secure or satisfying?</li>
+                <li>Am I more eager to become rich than to become faithful?</li>
+                <li>Where am I tempted to compromise righteousness for financial advantage?</li>
+                <li>Does generosity feel like loss because I functionally believe everything is mine?</li>
+                <li>Am I judging someone’s financial condition without knowing whether laziness, injustice, hardship, generosity, or some other factor is involved?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">GENEROSITY & CARE FOR OTHERS</span>
+            <div>
+              <h3>Wisdom loosens the grip of self-interest</h3>
+              <p>Proverbs repeatedly connects righteousness with open-handedness, care for the poor, timely help, and a willingness to use resources for more than personal security.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 3:27–28</span><span class="verse-chip">Prov. 11:24–26</span><span class="verse-chip">Prov. 14:21</span><span class="verse-chip">Prov. 14:31</span><span class="verse-chip">Prov. 19:17</span><span class="verse-chip">Prov. 21:13</span><span class="verse-chip">Prov. 22:9</span><span class="verse-chip">Prov. 28:27</span><span class="verse-chip">Prov. 31:8–9</span><span class="verse-chip">Prov. 31:20</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> generosity recognizes that possessions are tools of stewardship, not merely walls of personal security.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Timely help when it is actually in our power to act (3:27–28).</li>
+                  <li>Open-handedness rather than fear-driven hoarding (11:24–26).</li>
+                  <li>Recognition that treatment of the poor reflects our posture toward their Maker (14:31; 19:17).</li>
+                  <li>Attention to cries for help rather than convenient deafness (21:13).</li>
+                  <li>Advocacy for people who lack the power to speak effectively for themselves (31:8–9).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman’s work on wealth and poverty keeps the subject morally broad: Proverbs can praise diligence and wise stewardship while also condemning injustice and insisting that the poor not be reduced to stereotypes.</p>
+              </article>
+              <article>
+                <h4>Fear of Yahweh connection</h4>
+                <p>If Yahweh is Creator and Owner, generosity is not merely philanthropy. It is a practical acknowledgment that our resources are held under his authority and should serve his moral purposes.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>When I say “I can’t help,” do I mean unable—or unwilling to absorb the cost?</li>
+                <li>What amount of security would ever feel like enough?</li>
+                <li>Do I notice needs that do not directly benefit me?</li>
+                <li>Is my generosity planned, or only occasional and emotional?</li>
+                <li>How would I use this resource differently if I saw it as Yahweh’s before I saw it as mine?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">BUSINESS ETHICS</span>
+            <div>
+              <h3>Integrity matters when money, pressure, and advantage are on the table</h3>
+              <p>Proverbs brings righteousness into contracts, pricing, measurements, negotiations, wages, debt, and the treatment of people with less power.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 11:1</span><span class="verse-chip">Prov. 16:8</span><span class="verse-chip">Prov. 16:11</span><span class="verse-chip">Prov. 20:10</span><span class="verse-chip">Prov. 20:14</span><span class="verse-chip">Prov. 20:17</span><span class="verse-chip">Prov. 20:23</span><span class="verse-chip">Prov. 22:16</span><span class="verse-chip">Prov. 22:22–23</span><span class="verse-chip">Prov. 28:6</span><span class="verse-chip">Prov. 28:8</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> a profitable deal is not automatically a wise deal. Proverbs asks whether the gain is honest, fair, and consistent with Yahweh’s moral order.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Honest measurements and truthful representations (11:1; 16:11).</li>
+                  <li>Righteous gain rather than larger profit purchased by compromise (16:8).</li>
+                  <li>Awareness of manipulation in negotiation—saying “bad, bad” and boasting afterward (20:14).</li>
+                  <li>Protection of people who lack leverage rather than using their weakness as opportunity (22:22–23).</li>
+                  <li>A good name and clean integrity that are worth more than short-term financial advantage.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>“Business Ethics” is one of the specific topical studies in Longman’s appendix. That is significant: Proverbs does not separate spiritual wisdom from ordinary economic decisions.</p>
+                <a href="https://books.google.com/books?id=T9prN-7WqYAC" target="_blank" rel="noopener">Longman, <em>Proverbs</em>, Topical Studies ↗</a>
+              </article>
+              <article>
+                <h4>Waltke</h4>
+                <p>Waltke’s treatment of Proverbs consistently places honest trade, just treatment, and care for the vulnerable inside the book’s moral order. Economic skill without righteousness is not biblical wisdom.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>Would I describe this deal the same way if the other party could hear me?</li>
+                <li>Am I benefiting from information, leverage, or weakness in a way that is technically legal but morally crooked?</li>
+                <li>What would “right, just, and fair” look like here?</li>
+                <li>Am I protecting a profit margin at the expense of my name?</li>
+                <li>Would I be comfortable asking Yahweh to bless the exact way I am making this money?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">HONESTY & TRUTHFULNESS</span>
+            <div>
+              <h3>Truthfulness is more than avoiding an outright lie</h3>
+              <p>Proverbs cares about truthful witnesses, reliable words, honest dealing, hidden motives, exaggeration, flattery, and the damage done when speech no longer matches reality.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 6:16–19</span><span class="verse-chip">Prov. 10:9</span><span class="verse-chip">Prov. 12:17</span><span class="verse-chip">Prov. 12:19</span><span class="verse-chip">Prov. 12:22</span><span class="verse-chip">Prov. 14:5</span><span class="verse-chip">Prov. 14:25</span><span class="verse-chip">Prov. 19:1</span><span class="verse-chip">Prov. 19:5</span><span class="verse-chip">Prov. 24:26</span><span class="verse-chip">Prov. 25:18</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> wisdom aligns words, motives, and reality. Deception fragments them.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>A straight path that does not require constant story-management (10:9).</li>
+                  <li>Words that remain true after the immediate advantage has passed (12:19).</li>
+                  <li>Accurate witness rather than selective truth designed to produce a desired outcome (14:5, 25).</li>
+                  <li>Integrity even when truth costs money, reputation, or convenience (19:1).</li>
+                  <li>Speech that is direct and faithful rather than manipulative or weaponized (24:26; 25:18).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Waltke</h4>
+                <p>For Waltke, truthful speech belongs to Proverbs’ covenantal moral order. Falsehood is not merely poor communication; it bends reality for selfish ends and damages the community that depends on trustworthy words.</p>
+              </article>
+              <article>
+                <h4>Kidner</h4>
+                <p>Kidner is especially good at showing how Proverbs exposes subtle dishonesty—flattery, half-truths, evasive speech, and testimony used as a weapon.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>Am I saying what is true, or what creates the impression I want?</li>
+                <li>What facts am I tempted to leave out because they weaken my position?</li>
+                <li>Would another person describe my version of events as fair?</li>
+                <li>Where has image-management become more important than truth?</li>
+                <li>What truth do I need to tell even though it may cost me?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">LEADERSHIP & AUTHORITY</span>
+            <div>
+              <h3>Authority magnifies both wisdom and folly</h3>
+              <p>Proverbs speaks often about kings, rulers, judges, counsel, justice, and the influence of leaders. The principles apply naturally wherever one person carries responsibility for others.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 11:14</span><span class="verse-chip">Prov. 16:10–15</span><span class="verse-chip">Prov. 20:8</span><span class="verse-chip">Prov. 20:18</span><span class="verse-chip">Prov. 20:28</span><span class="verse-chip">Prov. 21:1</span><span class="verse-chip">Prov. 24:23–25</span><span class="verse-chip">Prov. 25:4–5</span><span class="verse-chip">Prov. 28:16</span><span class="verse-chip">Prov. 29:2</span><span class="verse-chip">Prov. 29:4</span><span class="verse-chip">Prov. 29:12</span><span class="verse-chip">Prov. 29:14</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> wise leadership uses authority to establish justice, seek counsel, protect people, and create conditions in which others can flourish.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Counsel before major decisions rather than isolated certainty (11:14; 20:18).</li>
+                  <li>Impartial judgment rather than favoritism or pressure (24:23–25).</li>
+                  <li>Steadfast love and faithfulness as foundations of durable authority (20:28).</li>
+                  <li>Recognition that leaders shape culture: what they listen to and reward spreads through the organization (29:12).</li>
+                  <li>Humility under Yahweh, who remains sovereign even over powerful decision-makers (21:1).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Waltke</h4>
+                <p>Waltke gives close attention to Proverbs’ royal sayings. A ruler’s wisdom is measured not simply by effectiveness but by justice, truth, restraint, and the kind of order his leadership produces.</p>
+              </article>
+              <article>
+                <h4>Longman</h4>
+                <p>Longman repeatedly reads leadership sayings inside Proverbs’ larger moral theology: power is never autonomous. The leader remains accountable to Yahweh and needs counsel precisely because authority can amplify blind spots.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What behavior am I unintentionally rewarding?</li>
+                <li>Do people around me feel free to bring bad news or correction?</li>
+                <li>Am I using authority to serve the mission and people—or to protect myself?</li>
+                <li>Who is giving me counsel that does not depend on keeping me pleased?</li>
+                <li>What happens to fairness when I am under pressure?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">PLANNING, GUIDANCE & THE FUTURE</span>
+            <div>
+              <h3>Plan seriously without pretending to control tomorrow</h3>
+              <p>Proverbs commends foresight, counsel, diligence, and planning while simultaneously placing every human plan beneath Yahweh’s sovereignty.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 11:14</span><span class="verse-chip">Prov. 15:22</span><span class="verse-chip">Prov. 16:1–3</span><span class="verse-chip">Prov. 16:9</span><span class="verse-chip">Prov. 19:21</span><span class="verse-chip">Prov. 20:18</span><span class="verse-chip">Prov. 21:5</span><span class="verse-chip">Prov. 24:27</span><span class="verse-chip">Prov. 27:1</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> wisdom rejects both impulsiveness and the illusion of sovereignty. We plan carefully; Yahweh remains Lord of the outcome.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Plans tested by counsel rather than insulated from it (15:22; 20:18).</li>
+                  <li>Commitment of our work to Yahweh rather than self-sufficient confidence (16:3).</li>
+                  <li>Prudence that thinks ahead without boasting about tomorrow (27:1).</li>
+                  <li>Order: prepare what is foundational before building what depends on it (24:27).</li>
+                  <li>Diligent planning rather than hurried schemes (21:5).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman treats guidance, planning, and looking to the future as a distinct Proverbs theme. This fits the book’s tension well: wise people plan, seek advice, and anticipate consequences, but do not confuse planning with control.</p>
+                <a href="https://tst.bakeracademic.com/p/Proverbs-Tremper-III-Longman/40464" target="_blank" rel="noopener">Longman, <em>Proverbs</em> ↗</a>
+              </article>
+              <article>
+                <h4>Prudence connection</h4>
+                <p>This is one of the clearest places where prudence matters: the prudent person sees several moves ahead while remembering that Yahweh sees the whole board.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>Have I sought counsel—or only approval?</li>
+                <li>What consequences am I ignoring because I want to move quickly?</li>
+                <li>What must be put in order before this decision can be pursued responsibly?</li>
+                <li>Am I holding my plan with humility before Yahweh?</li>
+                <li>If the outcome changes, will I interpret that as failure—or as a reminder that my plan was never sovereign?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">ENVY & JEALOUSY</span>
+            <div>
+              <h3>Resentment turns another person’s good into our grievance</h3>
+              <p>Envy cannot enjoy another person’s blessing because it experiences that blessing as a threat or deprivation. Proverbs treats jealousy as a force capable of becoming more destructive than ordinary anger.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 3:31</span><span class="verse-chip">Prov. 14:30</span><span class="verse-chip">Prov. 23:17–18</span><span class="verse-chip">Prov. 24:1–2</span><span class="verse-chip">Prov. 24:19–20</span><span class="verse-chip">Prov. 27:4</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> envy fixes the heart on someone else’s advantage until gratitude, peace, friendship, and sound judgment are displaced.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>A tranquil heart rather than comparison-driven inner decay (14:30).</li>
+                  <li>Refusal to envy sinners because wisdom sees the end of their path (23:17–18; 24:19–20).</li>
+                  <li>Gratitude that receives one’s life from Yahweh rather than constantly measuring it against another person’s.</li>
+                  <li>Recognition that jealousy can become irrational and relationally destructive (27:4).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>On Proverbs 27:4 Longman describes jealousy/envy as a destructive energy: jealousy fears losing what one possesses, while envy angrily desires what another possesses. Both can consume relationships and judgment.</p>
+                <a href="https://irp.cdn-website.com/85eee812/files/uploaded/Proverbs_27.1-27_%28Manuscript%29.pdf" target="_blank" rel="noopener">Longman on Proverbs 27:4 ↗</a>
+              </article>
+              <article>
+                <h4>Waltke</h4>
+                <p>Waltke’s treatment of Proverbs 27 underscores how jealousy joins anger among the forces that make relationships unbearable and destructive. Wisdom learns to identify the inward comparison before it becomes outward damage.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>Whose success makes it harder for me to be grateful?</li>
+                <li>What do I believe their blessing says about my worth or God’s care for me?</li>
+                <li>Do I secretly enjoy hearing something negative about a person I envy?</li>
+                <li>What would it look like to actively bless, praise, or pray for that person?</li>
+                <li>Am I looking at another person’s present advantage while ignoring the whole path?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">ALCOHOL & SELF-CONTROL</span>
+            <div>
+              <h3>Anything that governs perception can govern the life</h3>
+              <p>Proverbs’ concern is not simplistic: wine can appear in ordinary and celebratory life, yet intoxication can deceive, impair judgment, fuel conflict, distort speech, and erode self-rule.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 20:1</span><span class="verse-chip">Prov. 21:17</span><span class="verse-chip">Prov. 23:19–21</span><span class="verse-chip">Prov. 23:29–35</span><span class="verse-chip">Prov. 31:4–7</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> wisdom values clear perception and self-government; intoxication can compromise both.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Respect for alcohol’s power to deceive rather than confidence in personal immunity (20:1).</li>
+                  <li>Recognition of the social and economic consequences of habitual excess (23:19–21).</li>
+                  <li>Clear-eyed attention to addiction’s grip: conflict, pain, distorted perception, and repeated return (23:29–35).</li>
+                  <li>Greater caution where responsibility for others requires unimpaired judgment (31:4–5).</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman’s topical appendix begins with alcohol. In Proverbs 23 he emphasizes how addiction clouds perception: the intoxicated person no longer sees circumstances, speaks, or acts with sound judgment.</p>
+                <a href="https://www.bibleoutlines.com/proverbs-2312-35-words-of-the-wise-concerns-related-to-training-youth/" target="_blank" rel="noopener">Longman on Proverbs 23:29–35 ↗</a>
+              </article>
+              <article>
+                <h4>Wisdom connection</h4>
+                <p>The issue is larger than whether something is permitted. Prudence asks what it does to judgment, responsibility, relationships, reputation, and the ability to govern oneself.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>Do I treat alcohol as something I control—or something whose power I need to respect?</li>
+                <li>Have people who know me well expressed concern about my pattern?</li>
+                <li>Does drinking make me less able to speak, perceive, restrain myself, or fulfill responsibility wisely?</li>
+                <li>Am I defending freedom while ignoring consequences?</li>
+                <li>Would abstaining in my present situation be the more prudent choice even if I believe drinking is permissible?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+<details class="practical-topic">
+          <summary>
+            <span class="topic-label">FAMILY RELATIONSHIPS</span>
+            <div>
+              <h3>Wisdom is tested most closely at home</h3>
+              <p>Proverbs treats family life as a primary arena of wisdom: parents instruct, children receive or reject formation, spouses affect the atmosphere of the home, and generations can become sources of honor or grief.</p>
+            </div>
+          </summary>
+          <div class="practical-body">
+            <div class="practical-columns">
+              <div class="practical-box">
+                <h4>Key Proverbs</h4>
+                <div class="verse-chips">
+                  <span class="verse-chip">Prov. 1:8–9</span><span class="verse-chip">Prov. 10:1</span><span class="verse-chip">Prov. 13:1</span><span class="verse-chip">Prov. 15:20</span><span class="verse-chip">Prov. 17:1</span><span class="verse-chip">Prov. 17:6</span><span class="verse-chip">Prov. 19:13–14</span><span class="verse-chip">Prov. 23:22–25</span><span class="verse-chip">Prov. 27:15–16</span><span class="verse-chip">Prov. 31:10–31</span>
+                </div>
+                <p style="margin-top:12px"><strong>Main pattern:</strong> wisdom is not proven by how impressive someone sounds in public but by the kind of life his or her presence helps create in the household.</p>
+              </div>
+              <div class="practical-box">
+                <h4>What wisdom is trying to form</h4>
+                <ul>
+                  <li>Children who listen to formative instruction rather than treating independence as maturity.</li>
+                  <li>Parents whose goal is wisdom formation rather than merely outward compliance.</li>
+                  <li>A home where peace is valued above abundance with strife (17:1).</li>
+                  <li>Honor across generations rather than contempt or neglect (17:6; 23:22).</li>
+                  <li>Character in marriage that makes the home safer, stronger, and more trustworthy.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="theologian-note">
+              <article>
+                <h4>Longman</h4>
+                <p>Longman includes family relationships among his topical Proverbs studies because wisdom is fundamentally social. The household is one of the first communities in which instruction, correction, loyalty, conflict, diligence, and speech become visible.</p>
+                <a href="https://tst.bakeracademic.com/p/Proverbs-Tremper-III-Longman/40464" target="_blank" rel="noopener">Longman, <em>Proverbs</em> ↗</a>
+              </article>
+              <article>
+                <h4>Kidner</h4>
+                <p>Kidner’s treatment of family sayings preserves Proverbs’ realism: family can be a profound source of joy and stability, but folly at home can also become an especially intimate form of grief.</p>
+              </article>
+            </div>
+            <div class="mentor-questions">
+              <h4>Diagnostic questions</h4>
+              <ul>
+                <li>What version of me does my family consistently experience?</li>
+                <li>Is my home becoming more peaceful, truthful, and secure because of my presence?</li>
+                <li>Am I trying to control family members—or form and serve them wisely?</li>
+                <li>Where do anger, criticism, withdrawal, passivity, or selfishness show up most clearly at home?</li>
+                <li>What would wisdom look like in one ordinary interaction today?</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      
+
+      </div>
+</section>
+
+    <section id="anti" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">ANTI-WISDOM</p>
+        <h2>The same human capacities can be bent toward evil.</h2>
+        <p>Proverbs repeatedly contrasts wisdom with crookedness, perversity, deceptive speech, and evil devising. The problem is not simply lack of intelligence; it is the moral direction of the heart.</p>
+      </div>
+      <div class="anti-grid">
+        <article><h3>Perverted heart</h3><p>An inner orientation that twists what is straight and produces corrupt intentions (Prov. 6:14).</p></article>
+        <article><h3>Perverted tongue</h3><p>Speech bent away from truth and righteousness—an outward expression of inward crookedness (Prov. 10:31).</p></article>
+        <article><h3>Devising evil</h3><p>Planning ability turned against its proper end: not prudent foresight, but calculated wrongdoing (Prov. 6:14, 18).</p></article>
+        <article><h3>Folly</h3><p>A willful refusal of wisdom. The fool resists truth, instruction, correction, and the fear of Yahweh—unwilling to “buy” wisdom at the cost of humility, teachability, and sacrifice (Prov. 23:23).</p></article>
+      </div>
+    </section>
+
+    <section id="verses" class="section section-muted">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">VERSE INDEX</p>
+          <h2>Key passages</h2>
+        </div>
+        <div class="verse-list" id="verse-list"></div>
+      </div>
+    </section>
+
+    <section id="scholars" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">TRUSTED RESOURCES</p>
+        <h2>Voices behind the study</h2>
+        <p>Different teachers are used for different jobs. The Proverbs specialists below carry the main weight for Hebrew vocabulary, literary context, and exegesis. The broader evangelical voices are used for theological framing and practical application. This keeps the study grounded without pretending that every trusted theologian is a Hebrew specialist or a verse-by-verse Proverbs commentator.</p>
+      </div>
+
+      <div class="resource-groups">
+        <div>
+          <div class="resource-group-heading">
+            <h3>Primary Proverbs & Hebrew guides</h3>
+            <p>These are the main resources for lexical range, context, structure, and the way Proverbs itself develops its wisdom vocabulary.</p>
+          </div>
+          <div class="scholar-grid">
+            <article><h3>Tremper Longman III</h3><p>Especially useful for Proverbs as wisdom formation, moral discernment, theological orientation, and the practical character of wisdom.</p><span class="resource-role">Primary Proverbs commentary</span></article>
+            <article><h3>Bruce K. Waltke</h3><p>Especially useful for close Hebrew exegesis, lexical nuance, the moral structure of Proverbs, and the fear of Yahweh.</p><span class="resource-role">Primary Hebrew & exegetical guide</span></article>
+            <article><h3>Michael V. Fox</h3><p>Especially useful for philological precision, semantic distinctions, and the intellectual vocabulary of Proverbs.</p><span class="resource-role">Primary lexical guide</span></article>
+            <article><h3>Derek Kidner</h3><p>Especially useful for concise theological synthesis and memorable distinctions within Proverbs.</p><span class="resource-role">Primary concise commentary</span></article>
+          </div>
+        </div>
+
+        <div>
+          <div class="resource-group-heading">
+            <h3>Trusted broader theological voices</h3>
+            <p>These resources reinforce the theological and pastoral framework of the study. They are not being cited as though each author supplied the Hebrew definitions used on this site.</p>
+          </div>
+          <div class="scholar-grid broad">
+            <article>
+              <h3>John MacArthur</h3>
+              <p>Helpful for seeing Proverbs as a call to spiritual wisdom in conduct. His Proverbs introduction treats knowledge, understanding, instruction, discretion, and obedience as elements of wisdom and explicitly grounds that wisdom in the fear of the Lord and the Word of God.</p>
+              <span class="resource-role">Pastoral & biblical application</span>
+              <a class="resource-link" href="https://myopenbible.org/bible/intro/gty/pro" target="_blank" rel="noopener">MacArthur’s Proverbs introduction →</a>
+            </article>
+            <article>
+              <h3>R.C. Sproul</h3>
+              <p>Helpful for the distinction between possessing knowledge and actually living wisely. Sproul stresses that wisdom is the right application of knowledge and that the fear of God is necessary for knowledge to become biblical wisdom.</p>
+              <span class="resource-role">Theological framing</span>
+              <a class="resource-link" href="https://learn.ligonier.org/podcasts/ultimately-with-rc-sproul/knowledge-and-wisdom" target="_blank" rel="noopener">Knowledge and Wisdom — Ligonier →</a>
+            </article>
+            <article>
+              <h3>Wayne Grudem</h3>
+              <p>Helpful for connecting biblical truth with moral reasoning and everyday decisions. His work in Christian ethics is especially useful for asking how Scripture shapes conduct, how believers seek God’s will, and how God’s moral character governs right action.</p>
+              <span class="resource-role">Ethics & practical theology</span>
+              <a class="resource-link" href="https://www.crossway.org/books/christian-ethics-case-2/" target="_blank" rel="noopener">Christian Ethics — Crossway →</a>
+            </article>
+            <article>
+              <h3>Thomas R. Schreiner</h3>
+              <p>Helpful for placing Proverbs inside the larger biblical story. His biblical theology includes a dedicated treatment of Proverbs and connects Israel’s wisdom literature to the Bible’s unified presentation of God’s rule and his people’s response.</p>
+              <span class="resource-role">Biblical theology</span>
+              <a class="resource-link" href="https://tst.bakeracademic.com/p/The-King-in-His-Beauty-Thomas-R-Schreiner/40657" target="_blank" rel="noopener">The King in His Beauty — Baker Academic →</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div>
+        <strong>bidsgroup</strong>
+        <p>An expanding Bible teaching library. This first study focuses specifically on Solomon’s teaching about wisdom—what it is, what it produces, and what follows when it is rejected.</p>
+        <p style="max-width:900px;margin-top:10px">Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®), © 2001 by Crossway, a publishing ministry of Good News Publishers. Used by permission. All rights reserved. The ESV text may not be quoted in any publication made available to the public by a Creative Commons license. The ESV may not be translated into any other language.</p>
+      </div>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <dialog id="term-dialog">
+    <button class="dialog-close" aria-label="Close">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script>
+const terms = [
+  {
+    name: 'Wisdom', hebrew: 'חָכְמָה', translit: 'ḥokmâ', strong: 'H2451',
+    summary: 'Skill in godly living—competence for navigating life rightly in Yahweh’s world.',
+    emphasis: 'Practical, ethical, and theological skill.',
+    relation: 'The integrating virtue: the wise use of the other capacities under the fear of Yahweh.',
+    expanded: 'Wisdom in Proverbs is more than knowing facts or even making clever decisions. It is a cultivated competence for living fittingly within the moral order Yahweh has established. That wisdom has three inseparable aspects: practical—skillfully negotiating life’s opportunities, dangers, relationships, and complications; ethical—doing what is right, just, and fair; and theological—living in proper relationship with Yahweh, beginning with the fear of the LORD. Proverbs 1:3 anchors the ethical dimension in righteousness, justice, and equity; Proverbs 1:7 and 9:10 anchor the whole life of wisdom in the fear of Yahweh. Proverbs 14:8 then shows this wisdom operating through a prudent person who carefully discerns his path.',
+    scholar: 'A helpful way to summarize Longman’s point is: “Wisdom is knowing the right thing to do at the right time for the right reason.” Longman himself stresses that wise people know how to say and do the right thing at the right time. Wisdom is therefore more than having the right information; it is fitting action, fitting timing, and right moral purpose under Yahweh.',
+    verses: 'Prov. 1:2–7; 2:6; 3:13, 19; 4:5–7; 8:1–36; 9:10; 14:8'
+  },
+  {
+    name: 'Sound Wisdom', hebrew: 'תּוּשִׁיָּה', translit: 'tušiyyâ', strong: 'H8454',
+    summary: 'Effective, substantial wisdom—the kind of sound resourcefulness that actually works.',
+    emphasis: 'Competent wisdom with practical efficacy and stability.',
+    relation: 'Related to ḥokmâ, but often stresses soundness, effectiveness, or dependable competence.',
+    expanded: 'This term points toward wisdom that has substance and effectiveness rather than merely good intentions. It can carry the sense of sound resourcefulness, competence, or a dependable reserve of wisdom that enables a person to stand and act well.',
+    scholar: 'Waltke and Fox show why this word should not be squeezed into one English definition every time it appears. The basic idea often points to wisdom that is sound, dependable, and effective—the kind that actually helps a person stand and act well.',
+    verses: 'Prov. 2:7; 3:21; 8:14; 18:1'
+  },
+  {
+    name: 'Knowledge', hebrew: 'דַּעַת', translit: 'daʿat', strong: 'H1847',
+    summary: 'Possession of truth—knowing reality rightly, grounded in the fear of Yahweh.',
+    emphasis: 'What is known, recognized, and retained within Yahweh’s created and moral order.',
+    relation: 'Provides the content that understanding grasps and wisdom uses; Proverbs 1:7 gives that knowledge its governing frame of reference.',
+    expanded: 'Knowledge in Proverbs is not presented as an ethically neutral storehouse of information. Because the fear of Yahweh is its beginning (1:7), true knowledge involves recognizing reality as Yahweh defines it and receiving that truth with humble, teachable submission. The point is not that unbelievers know no true facts, but that Proverbs’ “knowledge” is God-oriented knowledge: reality understood and lived in proper relation to its Creator and Governor.',
+    scholar: 'Waltke puts it this way: “Unaided rationality cannot find an adequate frame of reference from which to know.” That helps explain why Proverbs 1:7 matters so much: knowledge is not just collecting facts; it begins with recognizing Yahweh and receiving reality from the One who sees the whole of it. — Bruce K. Waltke, “Does Proverbs Promise Too Much?”',
+    verses: 'Prov. 1:4, 7; 2:5–6, 10; 8:9–10; 9:10'
+  },
+  {
+    name: 'Understanding', hebrew: 'בִּינָה / תְּבוּנָה', translit: 'bînâ / tĕvûnâ', strong: 'H998 / H8394',
+    summary: 'Comprehension of truth—grasping relationships, distinctions, causes, and implications.',
+    emphasis: 'Mental grasp and the ability to distinguish.',
+    relation: 'Understanding processes what knowledge supplies; insight is its penetrating perceptive edge.',
+    expanded: 'Understanding is the capacity to grasp how things fit together: what distinguishes one course from another, what follows from a decision, and what a situation actually means. Proverbs 2:11 pictures understanding as a guard: once wisdom has taken root, understanding helps recognize implications and destructive paths before they are followed. The Hebrew vocabulary here overlaps substantially with language that the ESV may also render as discernment.',
+    scholar: 'Fox and Waltke help show how closely these words are related. Bîn, bînâ, and tĕvûnâ belong together as a word family, so the ESV may use words such as understanding or discernment even though the Hebrew ideas overlap.',
+    verses: 'Prov. 1:2; 2:2–3, 6, 11; 3:13, 19; 17:27'
+  },
+  {
+    name: 'Discern / Understand', hebrew: 'בִּין', translit: 'bîn', strong: 'H995',
+    summary: 'To perceive meaningful differences and judge their significance correctly.',
+    emphasis: 'The active capacity to distinguish, evaluate, and recognize what a situation calls for.',
+    relation: 'The verbal root behind much of Proverbs’ language of understanding and discernment. As a teaching category, discernment focuses especially on evaluating available paths and recognizing which response is morally right and fitting.',
+    expanded: 'The Hebrew verb bîn is broader than a strictly moral definition. It can mean to perceive, distinguish, understand, recognize, or evaluate. In Proverbs, however, those abilities are cultivated inside a moral and theological world shaped by righteousness, justice, equity, and the fear of Yahweh. Proverbs 14:8 uses a form of bîn where the ESV says the prudent person “discerns” his way: he does not merely notice differences; he evaluates his path and what it means before proceeding.',
+    scholar: 'Longman’s emphasis is especially helpful here. He treats discernment in Proverbs as moral and situational judgment: the wise person must recognize which righteous response fits this particular person, time, and circumstance. That keeps discernment from becoming mere clever analysis. The question is not only, “Which option works?” but, “Which response is faithful, righteous, and fitting before Yahweh here?”',
+    development: '<h4>Why Longman calls it moral discernment</h4><p>Proverbs aims to form people in <strong>righteousness, justice, and equity</strong> (Prov. 1:3). So discernment is more than telling one thing from another. It evaluates the available possibilities and recognizes which response is morally right and fitting for the situation.</p><p><strong>Proverbs 26:4–5 is a classic example:</strong> “Do not answer a fool according to his folly” is immediately followed by “Answer a fool according to his folly.” Both sayings can be wise. The discerning person must read the fool, the circumstance, the likely effect, and the moral purpose, then recognize which response fits.</p><p><strong>The point is not moral relativism.</strong> God’s moral order remains fixed; what requires discernment is how that moral wisdom should be applied faithfully in a complex situation.</p><p class="prudence-key"><strong>Discernment evaluates the available paths and recognizes which one is morally right and fitting for the particular situation.</strong></p><p><strong>A useful distinction:</strong> Knowledge supplies relevant truth. Understanding grasps what the principles mean. Discernment recognizes which response fits this case. Prudence considers where that response is likely to lead.</p><p><em>Note:</em> Proverbs 26:4–5 illustrates the need for discernment; it is not being listed as a lexical occurrence of <em>bîn</em>.</p>',
+    verses: 'Prov. 1:2, 6; 2:5, 9; 7:7; 14:8; 17:24, 28'
+  },
+  {
+    name: 'Prudence', hebrew: 'עָרְמָה / עָרוּם', translit: 'ʿormâ / ʿārûm', strong: 'H6195 / H6175',
+    summary: 'Foresighted shrewdness—seeing where present actions are likely to lead and acting accordingly.',
+    emphasis: 'Future-oriented anticipation and strategic caution.',
+    relation: 'Shrewdness can be used for good or evil; prudence is shrewdness directed by wisdom, righteousness, and the fear of Yahweh.',
+    expanded: 'Prudence notices consequences before they arrive. The prudent person reads a situation, recognizes danger or opportunity, and adjusts present conduct in light of what is likely to happen next. Proverbs 14:8 gives the pattern: the prudent person uses wisdom to discern his way—to evaluate the road before taking it. The underlying Hebrew can describe shrewdness more generally, so context determines whether that shrewdness is virtuous.',
+    scholar: 'Two helpful teaching summaries capture the feel of prudence: “The prudent person sees several moves ahead. The fool sees only the present.” And, “Prudence is wisdom that slows down before acting.” Neither means mere hesitation. Prudence pauses long enough to see where a choice is heading, then acts wisely within the moral boundaries set by Yahweh.',
+    development: '<h4>How Proverbs develops prudence</h4><p>Proverbs first introduces <em>ʿormâ</em> as something the simple need to acquire (1:4). Wisdom herself is later associated with it: “I, wisdom, dwell with prudence” (8:12). In the sayings that follow, the <em>ʿārûm</em> person becomes visible in ordinary life: he controls his reactions (12:16), handles knowledge carefully (12:23), acts with knowledge (13:16), examines his path (14:8, 15), and sees danger before walking into it (22:3; 27:12).</p><p class="prudence-key"><strong>Prudence is wisdom with foresight.</strong> It does not merely ask, “What should I do?” It asks, “Where will this lead?”</p><p><strong>Teaching summary:</strong> “The prudent person sees several moves ahead. The fool sees only the present.”</p>',
+    verses: 'Prov. 1:4; 8:5, 12; 12:16, 23; 13:16; 14:8, 15, 18; 22:3; 27:12'
+  },
+  {
+    name: 'Discretion', hebrew: 'מְזִמָּה', translit: 'mĕzimmâ', strong: 'H4209',
+    summary: 'Careful planning—the capacity to consider relevant factors and devise an intelligent course.',
+    emphasis: 'Thoughtful intention, planning, and mental design.',
+    relation: 'Can be wise discretion or evil plotting depending on the moral orientation of the heart.',
+    expanded: 'Discretion is deliberate rather than impulsive. It gathers what matters, holds a matter in mind, and forms a considered plan. Proverbs 2:11 says discretion “will watch over you,” showing that carefully formed judgment can function protectively before a person enters a destructive path. Proverbs can use this planning capacity positively or negatively, which makes the moral condition of the planner decisive.',
+    scholar: 'Waltke and Fox help show that the ability to plan is not automatically good or bad. The same planning ability can protect the wise in Proverbs 2:11 or be turned toward evil elsewhere. What matters is the heart and the purpose behind the plan.',
+    verses: 'Prov. 1:4; 2:11; 3:21; 5:2; 8:12'
+  },
+  {
+    name: 'Plans / Thoughts', hebrew: 'מַחֲשָׁבָה', translit: 'maḥăšābâ', strong: 'H4284',
+    summary: 'A thought, plan, design, or intention—the product of deliberation.',
+    emphasis: 'The plan or design itself rather than the capacity for discretion.',
+    relation: 'Useful beside mĕzimmâ: one often emphasizes the devised thought or plan, the other the planning faculty or discretion.',
+    expanded: 'Maḥăšābâ commonly names what the mind has formed—a thought, intention, design, or plan. That makes it useful for distinguishing the product of deliberation from the broader capacity or disposition involved in careful planning.',
+    scholar: 'This word is a good reminder not to make the English categories too rigid. A plan can be diligent, foolish, righteous, or evil. The word names the thought or design; the surrounding context tells us what kind of plan it is.',
+    verses: 'Prov. 12:5; 15:22, 26; 16:3; 19:21; 20:18; 21:5; 24:6'
+  },
+  {
+    name: 'Sense', hebrew: 'שֵׂכֶל', translit: 'śēkel', strong: 'H7922',
+    summary: 'Sound judgment—the practical ability to think and act sensibly.',
+    emphasis: 'Good judgment expressed in conduct.',
+    relation: 'A useful ESV teaching category for sound judgment produced by a wisely functioning inner person. “Sense” is not tied to one Hebrew word.',
+    expanded: '“Sense” is an English translation category rather than a single Hebrew technical term. In Proverbs 19:11 the ESV uses “sense” for śēkel, a word that can carry ideas such as good judgment, insight, prudence, or success. But in other passages the ESV may use “sense” to express how the heart (lēb) is functioning. The teaching category remains useful: sense describes sound judgment that shows itself in fitting conduct, without implying that every occurrence comes from the same Hebrew word.',
+    scholar: 'This distinction helps keep the English framework honest. The goal is not to say that Hebrew has one word meaning exactly “sense,” but to identify a recurring function in Proverbs: a well-formed person judges a situation soundly and responds appropriately.',
+    development: '<h4>Heart is not another word for “sense”</h4><p><em>Lēb</em> (<strong>H3820</strong>) means <strong>heart</strong>. In Proverbs the heart includes much of what modern English associates with the <strong>mind</strong>: thinking, understanding, judgment, intention, desire, and moral direction. In Proverbs 8:5, the ESV’s “learn sense” translates an expression containing <em>bîn</em> (“understand”) and <em>lēb</em> (“heart”). The translation communicates the function of the expression in natural English; it does not redefine <em>lēb</em> as “sense.”</p><p class="prudence-key"><strong>Heart is the inner control center; sense is the sound judgment evident when that inner person functions wisely.</strong></p>',
+    verses: 'Prov. 3:4; 12:8; 13:15; 16:22; 19:11; compare 8:5'
+  },
+  {
+    name: 'Heart', hebrew: 'לֵב', translit: 'lēb', strong: 'H3820',
+    summary: 'The inner control center of the person—including what we often call the mind: thought, understanding, desire, intention, judgment, and moral orientation.',
+    emphasis: 'The person’s inward center—not emotion alone, and not a separate “sense” virtue.',
+    relation: 'The heart is the inner faculty in which the wisdom capacities operate. It may possess knowledge, understanding, wisdom, judgment, desire, and moral direction.',
+    expanded: 'The lexical meaning of lēb is “heart.” In biblical Hebrew, however, the heart is much broader than the modern English idea of feelings. It includes what we often call the mind—the place of thinking, understanding, and reasoning—as well as desire, choice, intention, judgment, and moral direction. Proverbs 2:10 says wisdom “will come into your heart,” showing that wisdom is meant to become inwardly formative, not merely heard or memorized. Proverbs 8:5 is especially instructive: when the ESV says “learn sense,” it is translating an expression built from bîn (“understand”) and lēb (“heart”). The translators are communicating the function of the expression, not saying that lēb itself means “sense.”',
+    scholar: 'Waltke’s treatment of the biblical heart helps correct a modern habit of separating “heart” from “mind.” In Proverbs, the heart can think, understand, choose, desire, plan, and take moral direction. It is best viewed as the inner control center of the person.',
+    development: '<h4>Why the ESV can translate a heart expression as “sense”</h4><p>Hebrew can describe understanding and judgment as functions of the <em>heart</em>. English often expresses the same idea with words such as <strong>mind, sense, judgment,</strong> or <strong>understanding</strong>. Therefore an English translation may render the function naturally rather than reproduce the Hebrew idiom word-for-word.</p><p><strong>This strengthens the framework rather than weakening it:</strong> Heart is not another virtue alongside Knowledge, Understanding, Wisdom, Prudence, Discernment, and Discretion. It is the inner center that receives, stores, evaluates, desires, chooses, and acts. “Sense” describes one kind of sound judgment that can emerge when that center is well formed.</p>',
+    verses: 'Prov. 2:2, 10; 3:1, 3, 5; 4:23; 6:14, 18; 8:5; 10:13; 14:33; 15:14; 16:9, 21; 19:8'
+  },
+  {
+    name: 'Instruction', hebrew: 'מוּסָר', translit: 'mûsār', strong: 'H4148',
+    summary: 'Formative discipline—instruction that teaches, corrects, trains, and shapes character.',
+    emphasis: 'Education through teaching and correction.',
+    relation: 'Wisdom must be learned through teachability; rejection of correction is a defining mark of folly.',
+    expanded: 'Mûsār includes more than classroom instruction. It is formative discipline: teaching, correction, and warning through which a person is trained in wisdom. Proverbs therefore makes teachability a moral issue, not merely a learning style.',
+    scholar: 'Longman and Waltke both stress that instruction is meant to shape the person, not just fill the mind. The wise person accepts correction and training because getting wisdom costs something; the fool refuses that process.',
+    verses: 'Prov. 1:2–3, 7–8; 3:11; 4:1, 13; 8:10, 33; 12:1; 15:32–33'
+  },
+  {
+    name: 'Counsel', hebrew: 'עֵצָה', translit: 'ʿēṣâ', strong: 'H6098',
+    summary: 'Advice and strategic guidance directed toward a sound course of action.',
+    emphasis: 'Guidance that helps determine what should be done.',
+    relation: 'Wise counsel externalizes wisdom: the learner benefits from judgment beyond his own perspective.',
+    expanded: 'Counsel recognizes that wise judgment need not be generated in isolation. It brings another person’s perspective, experience, and deliberation into the decision-making process and can correct the blind spots of self-reliance.',
+    scholar: 'The commentators draw attention to Proverbs’ repeated call for many counselors. Part of wisdom is simply recognizing that our own judgment has limits and that another wise person may see something we do not.',
+    verses: 'Prov. 1:25, 30; 8:14; 11:14; 12:15; 15:22; 19:20–21; 20:18'
+  }
+];
+
+const comparisons = [
+  ['Knowledge vs. Understanding', 'Knowledge', 'Possesses the truth or relevant information.', 'Understanding', 'Grasps its meaning, connections, distinctions, and implications.'],
+  ['Understanding vs. Insight', 'Understanding', 'Comprehends how a matter fits together.', 'Insight', 'Penetrates beneath the surface to perceive what is really going on.'],
+  ['Prudence vs. Discernment', 'Prudence', 'Looks ahead: “Where is this course likely to lead?”', 'Discernment', 'Evaluates the available paths: “Which response is morally right and fitting here?”'],
+  ['Prudence vs. Sense', 'Prudence', 'Anticipatory and strategic; especially alert to consequences.', 'Sense', 'Sound practical judgment in the situation at hand.'],
+  ['Discretion vs. Prudence', 'Discretion', 'Forms and guards a considered plan.', 'Prudence', 'Sees likely outcomes and adjusts conduct before danger arrives.'],
+  ['Ḥokmâ (Wisdom) vs. Tušiyyâ (Sound Wisdom)', 'Ḥokmâ (Wisdom)', 'Broad skill in wise and godly living.', 'Tušiyyâ (Sound Wisdom)', 'Sound, effective wisdom—resourcefulness with substance and stability.'],
+  ['Mĕzimmâ (Discretion) vs. Maḥăšābâ (Plans / Thoughts)', 'Mĕzimmâ (Discretion)', 'The planning faculty or considered devising; its moral direction is shown by the context.', 'Maḥăšābâ (Plans / Thoughts)', 'A thought, design, intention, or plan that has been formed.'],
+  ['Lēb (Heart) vs. Śēkel (Sense)', 'Lēb (Heart)', 'Lexically “heart”: the inner control center—including what we call the mind—from which thinking, desire, judgment, and choice proceed. It does not itself mean “sense.”', 'Śēkel (Sense)', 'A distinct Hebrew word that can express good sense, insight, prudent judgment, or success. The ESV’s English word “sense” can also represent other Hebrew expressions depending on context.']
+];
+
+const verses = [
+  ['Proverbs 1:4', 'The book aims to give prudence to the simple and knowledge and discretion to the young: knowledge provides truth, prudence looks ahead, and discretion forms a considered plan—all under the governing fear of Yahweh in 1:7.', ['prudence','knowledge','discretion','simple']],
+  ['Proverbs 1:2–7', 'Programmatic introduction to wisdom, instruction, understanding, prudence, knowledge, discretion, and the fear of Yahweh.', ['wisdom','knowledge','prudence','discretion']],
+  ['Proverbs 2:10–11', 'Wisdom enters the heart and becomes inwardly protective: discretion watches and understanding guards. This is the middle stage between the capacities introduced in 1:4 and the mature evaluation of one’s path in 14:8.', ['wisdom','heart','knowledge','discretion','understanding','protection']],
+  ['Proverbs 3:5–7', 'Trust in Yahweh rather than autonomous understanding; do not be wise in your own eyes; fear Yahweh and turn away from evil. The passage joins epistemology, humility, fear, and ethics.', ['fear of Yahweh','trust','understanding','ethics']],
+  ['Proverbs 3:19–21', 'Yahweh founded creation by wisdom and understanding; the son is told to keep sound wisdom and discretion.', ['wisdom','understanding','sound wisdom','discretion']],
+  ['Proverbs 6:12–14', 'Crooked speech and a perverted heart culminate in continually devising evil and sowing discord.', ['heart','speech','anti-wisdom']],
+  ['Proverbs 8:5', 'The simple are summoned to learn prudence; fools are summoned to understand heart/sense.', ['prudence','heart','sense']],
+  ['Proverbs 9:1–18', 'Woman Wisdom and Woman Folly issue competing invitations to the simple. Their similar calls conceal opposite character and destinations; 9:10 places the fear of Yahweh at the center of the decision.', ['wisdom','folly','fear of Yahweh','two ways','Longman']],
+  ['Proverbs 14:8', 'Wisdom, prudence, and discernment work together in one verse. The ESV renders a form of bîn as “discern,” showing how the Hebrew vocabulary of understanding, insight, and discernment overlaps.', ['wisdom','prudence','discernment','bîn']],
+  ['Proverbs 14:26–27', 'Fear of Yahweh produces strong confidence, refuge, and a fountain of life. The God whom the righteous fear is also the God in whom they find safety.', ['fear of Yahweh','refuge','life','confidence']],
+  ['Proverbs 17:27–28', 'Knowledge restrains words; understanding produces coolness of spirit; even silence can imitate wisdom.', ['knowledge','understanding','speech']],
+  ['Proverbs 21:5', 'The plans of the diligent lead toward abundance, illustrating deliberate thought and future consequence.', ['plans','prudence']],
+  ['Proverbs 26:4–5', 'Paired instructions about answering a fool show why Proverbs requires moral and situational discernment: the wise person must know which response fits the person, circumstance, and purpose. These verses illustrate discernment rather than supplying a lexical occurrence of bîn.', ['discernment','context','moral judgment','Longman']]
+];
+
+const termGrid = document.querySelector('#term-grid');
+const search = document.querySelector('#term-search');
+const noResults = document.querySelector('#no-results');
+const dialog = document.querySelector('#term-dialog');
+const dialogContent = document.querySelector('#dialog-content');
+
+function cardMarkup(term, index) {
+  return `<button class="term-card" data-index="${index}">
+    <span class="meta">${term.translit} · ${term.strong}</span>
+    <h3>${term.name}</h3>
+    <p>${term.summary}</p>
+    <span class="open">Open word study →</span>
+  </button>`;
+}
+
+function renderTerms(filter = '') {
+  const needle = filter.trim().toLowerCase();
+  const matched = terms.map((t, i) => ({t, i})).filter(({t}) => Object.values(t).join(' ').toLowerCase().includes(needle));
+  termGrid.innerHTML = matched.map(({t, i}) => cardMarkup(t, i)).join('');
+  noResults.hidden = matched.length !== 0;
+}
+
+function openTerm(term) {
+  dialogContent.innerHTML = `
+    <p class="detail-meta">${term.translit} · ${term.strong}</p>
+    <div class="hebrew" lang="he">${term.hebrew}</div>
+    <h2>${term.name}</h2>
+    <p class="lead-small" style="color:#4f5b56">${term.summary}</p>
+    <div class="detail-grid">
+      <div class="detail-box"><h4>Primary emphasis</h4><p>${term.emphasis}</p></div>
+      <div class="detail-box"><h4>Relationship to the system</h4><p>${term.relation}</p></div>
+      <div class="detail-box" style="grid-column:1/-1"><h4>Selected Proverbs references</h4><p>${term.verses}</p></div>
+    </div>
+    <div class="study-expansion">
+      <div class="detail-box"><h4>Expanded definition</h4><p>${term.expanded}</p></div>
+      <div class="detail-box scholar-note"><h4>Helpful insight</h4><p>${term.scholar}</p></div>
+      ${term.development ? `<div class="detail-box" style="grid-column:1/-1">${term.development}</div>` : ''}
+    </div>`;
+  dialog.showModal();
+  if (window.dispatchEvent) {
+    window.dispatchEvent(new Event('esv-crossref.trigger-linkify'));
+  }
+}
+
+renderTerms();
+search.addEventListener('input', e => renderTerms(e.target.value));
+termGrid.addEventListener('click', e => {
+  const card = e.target.closest('.term-card');
+  if (card) openTerm(terms[Number(card.dataset.index)]);
+});
+document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+
+const compareGrid = document.querySelector('#compare-grid');
+compareGrid.innerHTML = comparisons.map(c => `<article class="compare-card">
+  <div class="compare-title">${c[0]}</div>
+  <div class="compare-body">
+    <div class="compare-side"><strong>${c[1]}</strong><p>${c[2]}</p></div>
+    <div class="compare-side"><strong>${c[3]}</strong><p>${c[4]}</p></div>
+  </div>
+</article>`).join('');
+
+const verseList = document.querySelector('#verse-list');
+verseList.innerHTML = verses.map(v => `<article class="verse-item">
+  <div class="verse-ref esv-key-passage" tabindex="0" role="link" title="Read this passage in the ESV">${v[0]}</div>
+  <div class="verse-note">${v[1]}</div>
+  <div class="verse-tags">${v[2].map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+</article>`).join('');
+window.addEventListener('load', () => {
+  window.dispatchEvent(new Event('esv-crossref.trigger-linkify'));
+});
+
+const menu = document.querySelector('.menu-btn');
+const nav = document.querySelector('#site-nav');
+menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+});
+nav.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); });
+
+  </script>
+
+  <script type="text/javascript">
+    window.ESV_CROSSREF_OPTIONS = {
+      border_color: 'D9D4C7',
+      border_radius: 12,
+      header_font_color: '183D33',
+      body_font_color: '27332F',
+      footer_font_color: '68766F',
+      header_background_color: 'F3F0E7',
+      body_background_color: 'FFFFFF',
+      footer_background_color: 'F3F0E7',
+      header_font_size: 16,
+      body_font_size: 15,
+      footer_font_size: 12,
+      header_font_family: 'Georgia',
+      body_font_family: 'Georgia',
+      footer_font_family: 'Arial'
+    };
+  </script>
+  <script src="https://static.esvmedia.org/crossref/crossref.min.js" type="text/javascript"></script>
+
+
+  <script>
+    (function () {
+      function esvUrl(ref) {
+        let clean = ref.trim()
+          .replace(/^Prov\./i, 'Proverbs')
+          .replace(/^Phil\./i, 'Philippians')
+          .replace(/^Col\./i, 'Colossians')
+          .replace(/^Rom\./i, 'Romans')
+          .replace(/^1 Cor\./i, '1 Corinthians')
+          .replace(/^2 Cor\./i, '2 Corinthians')
+          .replace(/[–—]/g, '-')
+          .replace(/\s+/g, '+');
+        return 'https://www.esv.org/' + clean + '/';
+      }
+
+      function prepareVerseChips() {
+        document.querySelectorAll('.verse-chip, .esv-key-passage').forEach(function (chip) {
+          if (chip.dataset.esvFallbackReady) return;
+          chip.dataset.esvFallbackReady = '1';
+          chip.setAttribute('tabindex', '0');
+          chip.setAttribute('role', 'link');
+          chip.setAttribute('title', 'Read this passage in the ESV');
+
+          function openFallback(event) {
+            if (event.target.closest && event.target.closest('a.esv-crossref-link')) return;
+            const ref = chip.textContent.trim();
+            window.open(esvUrl(ref), '_blank', 'noopener');
+          }
+
+          chip.addEventListener('click', openFallback);
+          chip.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              const linked = chip.querySelector('a.esv-crossref-link');
+              if (linked) linked.click();
+              else openFallback(event);
+            }
+          });
+        });
+      }
+
+      window.addEventListener('load', function () {
+        prepareVerseChips();
+        setTimeout(prepareVerseChips, 1200);
+      });
+    })();
+  </script>
+
+</body>
+</html>
